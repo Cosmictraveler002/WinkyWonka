@@ -8,7 +8,7 @@
 [![Runtime](https://img.shields.io/badge/Runtime-Bun-f472b6?logo=bun&style=flat-square)](https://bun.sh)
 [![Language](https://img.shields.io/badge/Language-TypeScript%205-3178c6?logo=typescript&style=flat-square)](https://www.typescriptlang.org)
 [![Three.js](https://img.shields.io/badge/3D-Three.js%20%2F%20R3F-black?logo=three.js&style=flat-square)](https://threejs.org)
-[![License](https://img.shields.io/badge/License-MIT-emerald?style=flat-square)](LICENSE)
+[![License](https://img.shields.io/badge/License-PolyForm%20Noncommercial-red?style=flat-square)](LICENSE)
 
 <p align="center">
   <a href="#-architecture">Architecture</a> •
@@ -208,6 +208,10 @@ Videos produced with this harness adhere to two core specifications:
 
 ---
 
-## 📄 License
+## 📄 License & Terms of Use
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the **[PolyForm Noncommercial License 1.0.0](LICENSE)**.
+
+- **Permitted**: Free for personal, non-commercial, educational, and internal research use.
+- **Strict Commercial Prohibitions**: Any commercial use, monetized video production, client deliverables, or integration into paid services/SaaS platforms is strictly prohibited without an explicit commercial license.
+- **Commercial Inquiries**: For commercial production rights or enterprise licensing, please contact the author via [Cosmictraveler002/Kalamotion](https://github.com/Cosmictraveler002/Kalamotion).
