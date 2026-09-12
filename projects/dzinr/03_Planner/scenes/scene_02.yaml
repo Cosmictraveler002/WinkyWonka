@@ -1,0 +1,25 @@
+id: scene_02
+title: "Minimalist Laptop Formation"
+duration_in_frames: 30
+duration_in_seconds: 1.0
+transition_to_next: zoomIn
+elements:
+  - type: MinimalLaptop
+    role: "Shapes converge to form minimalist vector laptop with glowing pulse on display"
+    motion: "Snappy convergence and display pulse"
+    accent_color: "#FF3B1D"
+shots:
+  - shot_id: shot_02
+    start_frame: 30
+    end_frame: 60
+    duration_frames: 30
+    duration_seconds: 1.0
+    purpose: demonstrate
+    attention_target: "Minimalist laptop icon with glowing display pulse"
+    secondary_target: "Converging vector geometry"
+    viewer_should_notice: "Shapes snap cleanly into an illustrated laptop with a digital loading/countdown pulse"
+    viewer_should_understand: "Digital craft, software mastery, and modern web engineering"
+    viewer_should_feel: "Sharp mechanical satisfaction"
+    complexity: low
+    attention_load: low
+    creative_rationale: "Quick comprehension hold establishing digital delivery capabilities"

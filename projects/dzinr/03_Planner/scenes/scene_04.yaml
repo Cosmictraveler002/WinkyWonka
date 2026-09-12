@@ -1,0 +1,25 @@
+id: scene_04
+title: "Variable Typographic Branding"
+duration_in_frames: 30
+duration_in_seconds: 1.0
+transition_to_next: flipBlack
+elements:
+  - type: VariableBranding
+    role: "Bold black 'Branding' text dynamically shifting in weight, scale, and letter spacing"
+    motion: "Typewriter precision spring settle"
+    accent_color: "#FF3B1D"
+shots:
+  - shot_id: shot_04
+    start_frame: 90
+    end_frame: 120
+    duration_frames: 30
+    duration_seconds: 1.0
+    purpose: explain
+    attention_target: "Bold 'Branding' typography shifting in weight and kerning"
+    secondary_target: "Clean white background canvas"
+    viewer_should_notice: "Stark black typography dynamically shifting letter weight, scale, and tracking"
+    viewer_should_understand: "Second core service: Holistic brand systems and visual identity"
+    viewer_should_feel: "Editorial elegance and typographic authority"
+    complexity: low
+    attention_load: low
+    creative_rationale: "Clean contrast hold allowing viewer absorption after the rapid diamond zoom"

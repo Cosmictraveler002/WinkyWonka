@@ -1,0 +1,27 @@
+id: scene_07
+title: "Kalaकृति Brand Payoff & URL"
+duration_in_frames: 60
+duration_in_seconds: 2.0
+elements:
+  - type: KalaKritiLogo
+    role: "Official Kalaकृति brand mark slamming into center with vermilion particle burst"
+    motion: "Snappy slam settling into rock-solid hold"
+    asset: "projects/dzinr/kala_logo.png"
+  - type: UrlReveal
+    role: "'kalakritico.in' URL fading in smoothly below mark"
+    motion: "Smooth opacity & subtle vertical drift"
+shots:
+  - shot_id: shot_07
+    start_frame: 210
+    end_frame: 270
+    duration_frames: 60
+    duration_seconds: 2.0
+    purpose: payoff
+    attention_target: "Official Kalaकृति (Kala / कृति) brand mark"
+    secondary_target: "Smooth fade-in of 'kalakritico.in' URL"
+    viewer_should_notice: "Heavy impact slam of Kala / कृति logo with warm ivory typography, settling with subtle vermilion accent glow, followed by kalakritico.in"
+    viewer_should_understand: "The agency behind the work is Kalaकृति — visit kalakritico.in"
+    viewer_should_feel: "Definitive resolution, premium craftsmanship, and desire to visit website"
+    complexity: low
+    attention_load: low
+    creative_rationale: "Inevitable brand payoff fulfilling the entire 9-second kinetic journey"

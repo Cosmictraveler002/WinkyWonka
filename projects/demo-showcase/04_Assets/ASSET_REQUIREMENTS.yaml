@@ -1,0 +1,28 @@
+project: demo-showcase
+total_required: 1
+procedural_remotion_elements:
+  - GradientBackground
+  - Noise
+  - GlowBadge
+  - Headline
+  - Zoom
+  - ParticleField
+  - GlassCard
+  - FilmGrain
+  - CTA
+asset_requirements:
+  - id: asset_product_01
+    name: Hero Showcase Subject
+    type: product_image
+    category: source_media
+    priority: 2
+    required: true
+    targetScenes:
+      - scene_02
+      - scene_03
+    referenceContext:
+      description: Visual showcase subject in 3D Particle Showcase
+      visualRole: Hero subject for feature highlight
+    requirements:
+      transparency: true
+      minimumResolution: 1200px

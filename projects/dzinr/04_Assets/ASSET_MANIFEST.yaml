@@ -1,0 +1,25 @@
+project: dzinr
+brand_name: "kalaकृति"
+updatedAt: "2026-09-12T15:30:00Z"
+totalAssets: 1
+assets:
+  - id: asset_kalakriti_logo
+    name: "Kalaकृति Brand Logo"
+    type: brand_logo
+    category: source_media
+    status: approved
+    source:
+      method: user_provided
+      path: "projects/dzinr/04_Assets/scene_07/kala_logo.png"
+      publicPath: "projects/dzinr/kala_logo.png"
+      transparentPath: "projects/dzinr/04_Assets/scene_07/kala_logo_transparent.png"
+      publicTransparentPath: "projects/dzinr/kala_logo_transparent.png"
+    validation:
+      valid: true
+      dimensions:
+        width: 1080
+        height: 1080
+      hasAlpha: true
+      format: png
+    targetScenes:
+      - scene_07

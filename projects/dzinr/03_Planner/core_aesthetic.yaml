@@ -1,0 +1,39 @@
+project: dzinr
+brand_name: "kalaकृति"
+website_url: "kalakritico.in"
+aesthetic:
+  style: modern-indic-editorial-motion
+  concept: "High-contrast editorial graphic design: stark white canvas inverting to obsidian black with electric vermilion vectors"
+  colors:
+    canvas_light: "#FFFFFF"
+    canvas_dark: "#0A0A0A"
+    text_dark: "#0A0A0A"
+    text_light: "#FAF8F5"
+    accent_vermilion: "#FF3B1D"
+    accent_vermilion_warm: "#FF4820"
+    neutral_gray: "#737373"
+    neutral_gray_light: "#E5E5E5"
+    diamond_frame: "#171717"
+  typography:
+    display_latin: "Archivo Black, Impact, sans-serif"
+    editorial_sans: "Syne, Inter, sans-serif"
+    devanagari_bold: "Yantramanav, Poppins, sans-serif"
+    condensed: "Oswald, sans-serif"
+    body: "Inter, sans-serif"
+  springs:
+    snappy:
+      damping: 14
+      stiffness: 240
+      mass: 0.7
+    bounce:
+      damping: 11
+      stiffness: 190
+      mass: 0.8
+    slam:
+      damping: 16
+      stiffness: 280
+      mass: 0.6
+  geometry:
+    diamond_angle: 45
+    line_weight_thick: 6
+    line_weight_thin: 2

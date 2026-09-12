@@ -1,0 +1,27 @@
+project: demo_02
+aesthetic:
+  style: editorial-dark
+  colors:
+    background: "#0a0e17"
+    surface: "#111827"
+    accent: "#06b6d4"
+    accent_secondary: "#ec4899"
+    text_primary: "#ffffff"
+    text_muted: "#94a3b8"
+  typography:
+    primary: Inter, sans-serif
+    display: Outfit, sans-serif
+    mono: JetBrains Mono, monospace
+  springs:
+    snappy:
+      damping: 15
+      stiffness: 220
+      mass: 0.8
+    smooth:
+      damping: 20
+      stiffness: 120
+      mass: 1
+    bouncy:
+      damping: 10
+      stiffness: 180
+      mass: 0.9

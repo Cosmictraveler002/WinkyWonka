@@ -1,0 +1,26 @@
+scene_id: "scene_01"
+title: "Kinetic Intro"
+duration_in_frames: 90
+layers:
+  - type: "shader_background"
+    component: "GradientBackground"
+    params:
+      type: "mesh"
+      stops:
+        - "#6366f1"
+        - "#ec4899"
+        - "#06b6d4"
+  - type: "texture"
+    component: "Noise"
+    params:
+      opacity: 0.04
+  - type: "badge"
+    component: "GlowBadge"
+    delay: 8
+    label: "NEXT-GEN MOTION HARNESS"
+  - type: "headline"
+    component: "Headline"
+    delay: 18
+    text: "REMOTION ORCHESTRATION"
+    animation: "slideUp"
+    fontSize: "5.2rem"

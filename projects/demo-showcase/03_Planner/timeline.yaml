@@ -1,0 +1,29 @@
+project: "demo-showcase"
+fps: 30
+width: 1920
+height: 1080
+total_duration_in_frames: 190
+rhythm:
+  template: "burst_hold_burst"
+  energy_curve: "HIGH (Hook 2.5s) -> ACCELERATE (1.8s) -> HOLD & PAYOFF (3.0s)"
+  cut_triggers:
+    - "kinetic_title_snap"
+    - "card_entrance"
+    - "cta_pulse"
+scenes:
+  - id: "scene_01"
+    title: "Kinetic Intro"
+    file: "scenes/scene_01.yaml"
+    duration_in_frames: 75
+    transition_to_next: "slideLeft"
+    transition_duration: 15
+  - id: "scene_02"
+    title: "3D Particle Showcase"
+    file: "scenes/scene_02.yaml"
+    duration_in_frames: 55
+    transition_to_next: "crossFade"
+    transition_duration: 15
+  - id: "scene_03"
+    title: "Production Ready Outro"
+    file: "scenes/scene_03.yaml"
+    duration_in_frames: 90

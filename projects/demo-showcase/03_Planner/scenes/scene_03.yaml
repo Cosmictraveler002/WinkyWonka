@@ -1,0 +1,23 @@
+scene_id: "scene_03"
+title: "Production Ready Outro"
+duration_in_frames: 90
+layers:
+  - type: "shader_background"
+    component: "GradientBackground"
+    params:
+      type: "mesh"
+      stops:
+        - "#06b6d4"
+        - "#6366f1"
+        - "#3b82f6"
+  - type: "texture"
+    component: "FilmGrain"
+    params:
+      intensity: 0.06
+  - type: "card"
+    component: "CTA"
+    delay: 8
+    title: "READY FOR PRODUCTION"
+    subtitle: "From video reference deconstruction to frame-accurate Remotion compositions in minutes."
+    buttonText: "Start Your Next Cut"
+    glowColor: "#06b6d4"

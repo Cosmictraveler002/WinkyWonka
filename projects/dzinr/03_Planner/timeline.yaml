@@ -1,0 +1,46 @@
+project: dzinr
+brand_name: "kalaकृति"
+website_url: "kalakritico.in"
+fps: 30
+width: 1920
+height: 1080
+total_duration_seconds: 11.06
+total_duration_frames: 332
+total_duration_in_frames: 332
+rhythm_template: "Template B (Burst -> Hold -> Burst -> Payoff)"
+pacing_curve: "GEOMETRIC_BURST (30) -> LAPTOP_SNAP (30) -> LOGO_ZOOM (30) -> BRANDING_HOLD (36) -> WEBSITE_INVERT (48) -> CREST_BUILD (42) -> HERO_BRAND_PAYOFF (116)"
+scenes:
+  - id: scene_01
+    title: "Abstract Geometric Cluster"
+    duration_in_frames: 30
+    duration_in_seconds: 1.0
+    transition_to_next: cut
+  - id: scene_02
+    title: "Minimalist Laptop Formation"
+    duration_in_frames: 30
+    duration_in_seconds: 1.0
+    transition_to_next: cut
+  - id: scene_03
+    title: "Kinetic Logo Designing Zoom"
+    duration_in_frames: 30
+    duration_in_seconds: 1.0
+    transition_to_next: cut
+  - id: scene_04
+    title: "Variable Typographic Branding"
+    duration_in_frames: 36
+    duration_in_seconds: 1.2
+    transition_to_next: cut
+  - id: scene_05
+    title: "Website Design Inversion Slide"
+    duration_in_frames: 48
+    duration_in_seconds: 1.6
+    transition_to_next: cut
+  - id: scene_06
+    title: "Rotating Wireframe Crest"
+    duration_in_frames: 42
+    duration_in_seconds: 1.4
+    transition_to_next: cut
+  - id: scene_07
+    title: "Kalaकृति Hero Brand Payoff & URL"
+    duration_in_frames: 116
+    duration_in_seconds: 3.87

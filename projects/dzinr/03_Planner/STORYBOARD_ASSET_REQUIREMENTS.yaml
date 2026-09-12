@@ -1,0 +1,12 @@
+project: dzinr
+asset_requirements:
+  - id: asset_product_01
+    type: product_image
+    name: Hero Showcase Subject
+    priority: 2
+    required: true
+    used_in_shots:
+      - S02_SH01
+      - S02_SH02
+    description: Visual showcase subject displayed within Scene 02 dimensional card
+    visual_role: Primary feature showcase asset with transparent background

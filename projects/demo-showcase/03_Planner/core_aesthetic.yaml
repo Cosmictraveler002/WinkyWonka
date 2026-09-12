@@ -1,0 +1,20 @@
+project: "demo-showcase"
+aesthetic:
+  theme: "dark_cyber_minimal"
+  colors:
+    background: "#080c14"
+    primary: "#6366f1"
+    secondary: "#ec4899"
+    accent: "#06b6d4"
+    text_primary: "#f8fafc"
+    text_secondary: "#94a3b8"
+    card_bg: "rgba(255, 255, 255, 0.04)"
+    card_border: "rgba(255, 255, 255, 0.12)"
+  typography:
+    heading_font: "Inter, system-ui, sans-serif"
+    body_font: "Inter, system-ui, sans-serif"
+    weight_bold: 800
+    weight_medium: 500
+  motion:
+    default_spring: "snappy"
+    exit_transition_frames: 20

@@ -1,0 +1,97 @@
+project: dzinr
+source_reference: "01_Reference/videos/dzinr-Old.mp4"
+reference_duration_seconds: 11.05
+reference_frame_count: 332
+fps: 30
+reference_resolution: "1920x1080"
+analysis_date: "2026-09-12"
+
+macro_deconstruction:
+  core_promise: "Rapid, premium design execution for modern brands without agency bloat"
+  visual_style: "Stark Editorial Graphic Design (White Canvas Inverting to Deep Obsidian Black with Electric Orange Accents)"
+  tempo: "Fast-paced agency showreel with crisp kinetic hard cuts and decisive brand payoff"
+
+frame_by_frame_breakdown:
+  - shot_id: shot_01_intro_cube
+    frames: "0 - 30 (00:00.00 - 00:01.00)"
+    duration_seconds: 1.0
+    canvas: "Pure White (#FFFFFF)"
+    primary_subject: "Isometric 3D black/orange cube bounce with radiating geometric debris (triangles, pluses, curved black swooshes)"
+    motion: "Elastic bounce entry settling in center"
+    typographic_content: "None"
+
+  - shot_id: shot_02_laptop_two
+    frames: "30 - 60 (00:01.00 - 00:02.00)"
+    duration_seconds: 1.0
+    canvas: "Pure White (#FFFFFF)"
+    primary_subject: "Black/orange stylized laptop with screen displaying bold glowing orange '2'"
+    motion: "Snappy pop-up snap with orange debris burst"
+    typographic_content: "'2'"
+
+  - shot_id: shot_03_logo_designing
+    frames: "60 - 90 (00:02.00 - 00:03.00)"
+    duration_seconds: 1.0
+    canvas: "Diamond Split (Black/White diagonal geometry)"
+    primary_subject: "Giant repeated 'Logo Designing' text in 3 tiers, center is solid electric orange (#FF4F18)"
+    motion: "Hard cut punch with horizontal typographic stagger"
+    typographic_content: "Logo Designing (repeated 3x)"
+
+  - shot_id: shot_04_branding_brackets
+    frames: "90 - 126 (00:03.00 - 00:04.20)"
+    duration_seconds: 1.2
+    canvas: "Pure White (#FFFFFF)"
+    primary_subject: "Ultra-bold editorial 'Branding' typography scaling into orange curved brackets '( Branding )' over thin architectural outline contours"
+    motion: "Kinetic scale-down into bracket lock"
+    typographic_content: "Branding"
+
+  - shot_id: shot_05_website_design
+    frames: "126 - 174 (00:04.20 - 00:05.80)"
+    duration_seconds: 1.6
+    canvas: "Pure White with bold diagonal black diamond frames"
+    primary_subject: "Modern typographic composition: 'WEBSITE' in black condensed uppercase (orange 'E') + 'design' in orange lowercase"
+    motion: "Fast slide-in along 45-degree architectural axis"
+    typographic_content: "WEBSITE design"
+
+  - shot_id: shot_06_creator_spotlight
+    frames: "174 - 216 (00:05.80 - 00:07.20)"
+    duration_seconds: 1.4
+    canvas: "Dramatic Contrast Inversion to Pitch Black (#000000)"
+    primary_subject: "Creator in hoodie & cap framed inside rounded rectangular screen enclosed in circular white halo with orange slash blades"
+    motion: "Rotating circular accents with pulse"
+    asset_binding: "asset_dzinr_creator"
+
+  - shot_id: shot_07_perspective_wipe
+    frames: "216 - 240 (00:07.20 - 00:08.00)"
+    duration_seconds: 0.8
+    canvas: "Pitch Black (#000000)"
+    primary_subject: "White rectangular prism/card flying in 3D perspective from right to left"
+    motion: "High-velocity perspective whip wipe"
+    typographic_content: "None"
+
+  - shot_id: shot_08_hero_brand_payoff
+    frames: "240 - 332 (00:08.00 - 00:11.05)"
+    duration_seconds: 3.05
+    canvas: "Pitch Black (#000000)"
+    primary_subject: "Massive centered white typography 'DZ!NR' (with exclamation mark '!') over exploding orange vector slash burst"
+    motion: "Impact slam with spring overshoot, slash burst dissipates leaving pure rock-solid brand hold"
+    typographic_content: "DZ!NR"
+    asset_binding: "asset_dzinr_logo"
+
+required_external_assets:
+  - id: asset_dzinr_creator
+    name: "Creator / Designer Portrait Media"
+    type: "creator_media"
+    priority: 1
+    required: true
+    target_shot: "shot_06_creator_spotlight (00:05.80 - 00:07.20)"
+    description: "Video clip or high-resolution photo of the creator/designer framed inside the rounded viewport"
+    requirements: "Clean portrait, high contrast, ideally transparent or tightly framed"
+
+  - id: asset_dzinr_logo
+    name: "DZ!NR Hero Brand Logo"
+    type: "brand_logo"
+    priority: 2
+    required: true
+    target_shot: "shot_08_hero_brand_payoff (00:08.00 - 00:11.05)"
+    description: "Vector SVG or high-res transparent PNG of the DZ!NR brand mark (with exclamation mark '!')"
+    requirements: "Transparent background, >= 1200px width"

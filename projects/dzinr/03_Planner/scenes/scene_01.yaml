@@ -1,0 +1,25 @@
+id: scene_01
+title: "Abstract Geometric Cluster"
+duration_in_frames: 30
+duration_in_seconds: 1.0
+transition_to_next: cut
+elements:
+  - type: GeometricCluster
+    role: "Radial burst of abstract cubes, chevrons, dots, and curved lines popping from center"
+    motion: "Snappy elastic spring burst expanding outward"
+    accent_color: "#FF3B1D"
+shots:
+  - shot_id: shot_01
+    start_frame: 0
+    end_frame: 30
+    duration_frames: 30
+    duration_seconds: 1.0
+    purpose: hook
+    attention_target: "Radial burst of abstract geometric shapes"
+    secondary_target: "Center point origin"
+    viewer_should_notice: "Explosive, playful pop of cubes, chevrons, dots, and curved lines from the center"
+    viewer_should_understand: "Creative energy and precision design fundamentals bursting into action"
+    viewer_should_feel: "Immediate visual intrigue and kinetic momentum"
+    complexity: medium
+    attention_load: medium
+    creative_rationale: "Fast, punchy digital pop capturing immediate attention on clinical white canvas"

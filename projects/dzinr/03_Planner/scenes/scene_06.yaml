@@ -1,0 +1,25 @@
+id: scene_06
+title: "Rotating Wireframe Crest"
+duration_in_frames: 60
+duration_in_seconds: 2.0
+transition_to_next: cut
+elements:
+  - type: RotatingWireframeCrest
+    role: "Sleek 3D wireframe globe / geometric lattice crest expanding from center with pulsating vermilion ring"
+    motion: "Continuous 3D perspective rotation with synthesizer riser scale"
+    accent_color: "#FF3B1D"
+shots:
+  - shot_id: shot_06
+    start_frame: 150
+    end_frame: 210
+    duration_frames: 60
+    duration_seconds: 2.0
+    purpose: escalate
+    attention_target: "3D rotating wireframe globe / geometric lattice crest"
+    secondary_target: "Pulsating vermilion geometric ring"
+    viewer_should_notice: "Sleek wireframe sphere rotating in 3D perspective, expanding and pulsating with building energy"
+    viewer_should_understand: "Global craft, cutting-edge creative technology, and momentum before the payoff"
+    viewer_should_feel: "Anticipation, crescendo, and technological sophistication"
+    complexity: medium
+    attention_load: medium
+    creative_rationale: "Bespoke geometric replacement for human photo maintaining kinetic tension before brand reveal"

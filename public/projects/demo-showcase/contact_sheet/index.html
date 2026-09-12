@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>demo-showcase - Motion Storyboard Contact Sheet</title>
+  <style>
+    :root {
+      --bg: #0b0f19;
+      --card-bg: rgba(255, 255, 255, 0.03);
+      --border: rgba(255, 255, 255, 0.08);
+      --primary: #6366f1;
+      --accent: #06b6d4;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      padding: 2.5rem;
+      min-height: 100vh;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+    h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.02em; }
+    .meta-bar {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 0.5rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+    .badge {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      background: rgba(99, 102, 241, 0.15);
+      color: #a5b4fc;
+      border: 1px solid rgba(99, 102, 241, 0.3);
+    }
+    .scene-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 1.75rem;
+      margin-bottom: 2rem;
+    }
+    .scene-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.25rem;
+    }
+    .scene-title { font-size: 1.4rem; font-weight: 700; color: #ffffff; }
+    .snapshot-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .snapshot-item {
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .snapshot-item:hover {
+      transform: translateY(-4px);
+      border-color: var(--primary);
+    }
+    .snapshot-item img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      display: block;
+      cursor: pointer;
+    }
+    .snapshot-meta {
+      padding: 0.75rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    .phase-tag {
+      font-weight: 600;
+      color: var(--accent);
+      text-transform: capitalize;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <span class="badge">Visual Contact Sheet</span>
+      <h1>demo-showcase</h1>
+      <div class="meta-bar">
+        <span>🎬 Total Frames: 190</span>
+        <span>⏱️ Duration: 6.3s</span>
+        <span>🎯 FPS: 30</span>
+        <span>📐 Resolution: 1920x1080</span>
+      </div>
+    </div>
+    <div style="text-align: right;">
+      <span class="badge" style="background: rgba(6, 182, 212, 0.15); color: #67e8f9; border-color: rgba(6, 182, 212, 0.3);">
+        Ready for Critic Audit
+      </span>
+    </div>
+  </header>
+
+  <main>
+    
+      <section class="scene-card">
+        <div class="scene-header">
+          <div>
+            <span style="color: var(--primary); font-weight: 700; font-size: 0.9rem;">SCENE 01</span>
+            <div class="scene-title">Kinetic Intro (scene_01)</div>
+          </div>
+        </div>
+        <div class="snapshot-grid">
+          
+            <div class="snapshot-item">
+              <img src="scene_01_entry.jpg" alt="Kinetic Intro - entry" onclick="window.open('scene_01_entry.jpg', '_blank')">
+              <div class="snapshot-meta">
+                <span class="phase-tag">entry</span>
+                <span>Frame 15</span>
+                <span>00:00.50</span>
+              </div>
+            </div>
+          
+            <div class="snapshot-item">
+              <img src="scene_01_apex.jpg" alt="Kinetic Intro - apex" onclick="window.open('scene_01_apex.jpg', '_blank')">
+              <div class="snapshot-meta">
+                <span class="phase-tag">apex</span>
+                <span>Frame 38</span>
+                <span>00:01.27</span>
+              </div>
+            </div>
+          
+            <div class="snapshot-item">
+              <img src="scene_01_settled.jpg" alt="Kinetic Intro - settled" onclick="window.open('scene_01_settled.jpg', '_blank')">
+              <div class="snapshot-meta">
+                <span class="phase-tag">settled</span>
+                <span>Frame 60</span>
+                <span>00:02.00</span>
+              </div>
+            </div>
+          
+        </div>
+      </section>
+    
+      <section class="scene-card">
+        <div class="scene-header">
+          <div>
+            <span style="color: var(--primary); font-weight: 700; font-size: 0.9rem;">SCENE 02</span>
+            <div class="scene-title">3D Particle Showcase (scene_02)</div>
+          </div>
+        </div>
+        <div class="snapshot-grid">
+          
+            <div class="snapshot-item">
+              <img src="scene_02_entry.jpg" alt="3D Particle Showcase - entry" onclick="window.open('scene_02_entry.jpg', '_blank')">
+              <div class="snapshot-meta">
+                <span class="phase-tag">entry</span>
+                <span>Frame 71</span>
+                <span>00:02.37</span>
+              </div>
+            </div>
+          
+            <div class="snapshot-item">
+              <img src="scene_02_apex.jpg" alt="3D Particle Showcase - apex" onclick="window.open('scene_02_apex.jpg', '_blank')">
+              <div class="snapshot-meta">
+                <span class="phase-tag">apex</span>
+                <span>Frame 88</span>
+                <span>00:02.93</span>
+              </div>
+            </div>
+          
+            <div class="snapshot-item">
+              <img src="scene_02_settled.jpg" alt="3D Particle Showcase - settled" onclick="window.open('scene_02_settled.jpg', '_blank')">
+              <div class="snapshot-meta">
+                <span class="phase-tag">settled</span>
+                <span>Frame 104</span>
+                <span>00:03.47</span>
+              </div>
+            </div>
+          
+        </div>
+      </section>
+    
+      <section class="scene-card">
+        <div class="scene-header">
+          <div>
+            <span style="color: var(--primary); font-weight: 700; font-size: 0.9rem;">SCENE 03</span>
+            <div class="scene-title">Production Ready Outro (scene_03)</div>
+          </div>
+        </div>
+        <div class="snapshot-grid">
+          
+            <div class="snapshot-item">
+              <img src="scene_03_entry.jpg" alt="Production Ready Outro - entry" onclick="window.open('scene_03_entry.jpg', '_blank')">
+              <div class="snapshot-meta">
+                <span class="phase-tag">entry</span>
+                <span>Frame 118</span>
+                <span>00:03.93</span>
+              </div>
+            </div>
+          
+            <div class="snapshot-item">
+              <img src="scene_03_apex.jpg" alt="Production Ready Outro - apex" onclick="window.open('scene_03_apex.jpg', '_blank')">
+              <div class="snapshot-meta">
+                <span class="phase-tag">apex</span>
+                <span>Frame 145</span>
+                <span>00:04.83</span>
+              </div>
+            </div>
+          
+            <div class="snapshot-item">
+              <img src="scene_03_settled.jpg" alt="Production Ready Outro - settled" onclick="window.open('scene_03_settled.jpg', '_blank')">
+              <div class="snapshot-meta">
+                <span class="phase-tag">settled</span>
+                <span>Frame 172</span>
+                <span>00:05.73</span>
+              </div>
+            </div>
+          
+        </div>
+      </section>
+    
+  </main>
+</body>
+</html>

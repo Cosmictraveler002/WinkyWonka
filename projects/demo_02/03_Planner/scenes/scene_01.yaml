@@ -1,0 +1,25 @@
+scene_id: scene_01
+title: Opening Hook
+duration_frames: 75
+camera:
+  movement: subtle-zoom-in
+  start_scale: 1
+  end_scale: 1.05
+layers:
+  - type: Background
+    component: GradientBackground
+    params:
+      colorStart: "#0a0e17"
+      colorEnd: "#1e1b4b"
+      angle: 135
+  - type: Typography
+    component: Headline
+    params:
+      text: PRECISION MOTION
+      preset: kinetic
+      delay: 0
+  - type: Typography
+    component: Caption
+    params:
+      text: Declarative animation at 60fps
+      delay: 15

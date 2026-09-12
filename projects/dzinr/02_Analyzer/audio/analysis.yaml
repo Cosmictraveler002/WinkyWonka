@@ -1,0 +1,528 @@
+source: ref_audio.wav
+duration_seconds: 11.029
+sample_rate: 48000
+channels: 2
+bit_depth: 16
+bpm:
+  detected: 69
+  confidence: 0.75
+  beat_positions:
+    - 0.2
+    - 1.07
+    - 1.94
+    - 2.81
+    - 3.68
+    - 4.55
+    - 5.42
+    - 6.29
+    - 7.16
+    - 8.03
+    - 8.9
+    - 9.77
+    - 10.64
+transients:
+  - time: 0.22
+    strength: 0.264
+    type: intro_hit
+  - time: 0.34
+    strength: 0.065
+    type: intro_hit
+  - time: 0.78
+    strength: 0.134
+    type: accent
+  - time: 1.07
+    strength: 0.148
+    type: accent
+  - time: 1.2
+    strength: 0.085
+    type: accent
+  - time: 1.65
+    strength: 0.243
+    type: kick
+  - time: 1.77
+    strength: 0.116
+    type: accent
+  - time: 1.9
+    strength: 0.038
+    type: accent
+  - time: 2.03
+    strength: 0.041
+    type: accent
+  - time: 2.23
+    strength: 0.042
+    type: accent
+  - time: 2.38
+    strength: 0.029
+    type: accent
+  - time: 2.52
+    strength: 0.28
+    type: kick
+  - time: 3.04
+    strength: 0.097
+    type: accent
+  - time: 3.33
+    strength: 0.222
+    type: kick
+  - time: 3.46
+    strength: 0.057
+    type: accent
+  - time: 3.77
+    strength: 0.032
+    type: accent
+  - time: 3.91
+    strength: 0.231
+    type: kick
+  - time: 4.04
+    strength: 0.032
+    type: accent
+  - time: 4.21
+    strength: 0.052
+    type: accent
+  - time: 4.77
+    strength: 0.189
+    type: kick
+  - time: 4.9
+    strength: 0.074
+    type: accent
+  - time: 5.22
+    strength: 0.032
+    type: accent
+  - time: 5.35
+    strength: 0.08
+    type: accent
+  - time: 5.64
+    strength: 0.212
+    type: kick
+  - time: 5.78
+    strength: 0.073
+    type: accent
+  - time: 5.9
+    strength: 0.029
+    type: accent
+  - time: 6.07
+    strength: 0.034
+    type: accent
+  - time: 6.21
+    strength: 0.131
+    type: accent
+  - time: 6.33
+    strength: 0.045
+    type: accent
+  - time: 6.47
+    strength: 0.051
+    type: accent
+  - time: 6.62
+    strength: 0.034
+    type: accent
+  - time: 6.75
+    strength: 0.056
+    type: accent
+  - time: 6.95
+    strength: 0.043
+    type: accent
+  - time: 7.07
+    strength: 0.119
+    type: accent
+  - time: 7.19
+    strength: 0.087
+    type: accent
+  - time: 7.33
+    strength: 0.036
+    type: accent
+  - time: 7.83
+    strength: 0.031
+    type: accent
+  - time: 7.97
+    strength: 0.046
+    type: accent
+  - time: 8.1
+    strength: 0.043
+    type: accent
+  - time: 8.22
+    strength: 0.099
+    type: accent
+energy_profile:
+  window_ms: 100
+  bins:
+    - time: 0
+      rms: 0.056
+      peak: 0.217
+    - time: 0.1
+      rms: 0.143
+      peak: 0.389
+    - time: 0.2
+      rms: 0.358
+      peak: 0.98
+    - time: 0.3
+      rms: 0.366
+      peak: 0.817
+    - time: 0.4
+      rms: 0.26
+      peak: 0.56
+    - time: 0.5
+      rms: 0.108
+      peak: 0.402
+    - time: 0.6
+      rms: 0.022
+      peak: 0.099
+    - time: 0.7
+      rms: 0.06
+      peak: 0.49
+    - time: 0.8
+      rms: 0.116
+      peak: 0.511
+    - time: 0.9
+      rms: 0.057
+      peak: 0.203
+    - time: 1
+      rms: 0.188
+      peak: 0.835
+    - time: 1.1
+      rms: 0.345
+      peak: 0.822
+    - time: 1.2
+      rms: 0.406
+      peak: 0.775
+    - time: 1.3
+      rms: 0.205
+      peak: 0.534
+    - time: 1.4
+      rms: 0.067
+      peak: 0.304
+    - time: 1.5
+      rms: 0.014
+      peak: 0.054
+    - time: 1.6
+      rms: 0.224
+      peak: 0.839
+    - time: 1.7
+      rms: 0.386
+      peak: 0.879
+    - time: 1.8
+      rms: 0.347
+      peak: 0.717
+    - time: 1.9
+      rms: 0.261
+      peak: 0.814
+    - time: 2
+      rms: 0.246
+      peak: 0.75
+    - time: 2.1
+      rms: 0.125
+      peak: 0.522
+    - time: 2.2
+      rms: 0.088
+      peak: 0.306
+    - time: 2.3
+      rms: 0.056
+      peak: 0.171
+    - time: 2.4
+      rms: 0.103
+      peak: 0.611
+    - time: 2.5
+      rms: 0.598
+      peak: 1
+    - time: 2.6
+      rms: 0.679
+      peak: 1
+    - time: 2.7
+      rms: 0.354
+      peak: 0.755
+    - time: 2.8
+      rms: 0.12
+      peak: 0.365
+    - time: 2.9
+      rms: 0.069
+      peak: 0.306
+    - time: 3
+      rms: 0.129
+      peak: 0.847
+    - time: 3.1
+      rms: 0.081
+      peak: 0.329
+    - time: 3.2
+      rms: 0.066
+      peak: 0.294
+    - time: 3.3
+      rms: 0.253
+      peak: 0.909
+    - time: 3.4
+      rms: 0.415
+      peak: 0.835
+    - time: 3.5
+      rms: 0.31
+      peak: 0.966
+    - time: 3.6
+      rms: 0.14
+      peak: 0.44
+    - time: 3.7
+      rms: 0.065
+      peak: 0.256
+    - time: 3.8
+      rms: 0.07
+      peak: 0.241
+    - time: 3.9
+      rms: 0.308
+      peak: 0.993
+    - time: 4
+      rms: 0.416
+      peak: 0.806
+    - time: 4.1
+      rms: 0.267
+      peak: 0.63
+    - time: 4.2
+      rms: 0.219
+      peak: 0.702
+    - time: 4.3
+      rms: 0.14
+      peak: 0.491
+    - time: 4.4
+      rms: 0.07
+      peak: 0.237
+    - time: 4.5
+      rms: 0.056
+      peak: 0.244
+    - time: 4.6
+      rms: 0.071
+      peak: 0.282
+    - time: 4.7
+      rms: 0.183
+      peak: 0.815
+    - time: 4.8
+      rms: 0.406
+      peak: 0.889
+    - time: 4.9
+      rms: 0.445
+      peak: 0.965
+    - time: 5
+      rms: 0.272
+      peak: 0.633
+    - time: 5.1
+      rms: 0.077
+      peak: 0.28
+    - time: 5.2
+      rms: 0.085
+      peak: 0.3
+    - time: 5.3
+      rms: 0.146
+      peak: 0.821
+    - time: 5.4
+      rms: 0.118
+      peak: 0.485
+    - time: 5.5
+      rms: 0.092
+      peak: 0.372
+    - time: 5.6
+      rms: 0.235
+      peak: 0.897
+    - time: 5.7
+      rms: 0.453
+      peak: 0.909
+    - time: 5.8
+      rms: 0.313
+      peak: 0.761
+    - time: 5.9
+      rms: 0.156
+      peak: 0.422
+    - time: 6
+      rms: 0.076
+      peak: 0.375
+    - time: 6.1
+      rms: 0.078
+      peak: 0.274
+    - time: 6.2
+      rms: 0.269
+      peak: 0.931
+    - time: 6.3
+      rms: 0.376
+      peak: 0.84
+    - time: 6.4
+      rms: 0.339
+      peak: 0.907
+    - time: 6.5
+      rms: 0.274
+      peak: 0.93
+    - time: 6.6
+      rms: 0.163
+      peak: 0.722
+    - time: 6.7
+      rms: 0.131
+      peak: 0.38
+    - time: 6.8
+      rms: 0.118
+      peak: 0.369
+    - time: 6.9
+      rms: 0.118
+      peak: 0.393
+    - time: 7
+      rms: 0.188
+      peak: 0.715
+    - time: 7.1
+      rms: 0.225
+      peak: 0.708
+    - time: 7.2
+      rms: 0.167
+      peak: 0.552
+    - time: 7.3
+      rms: 0.206
+      peak: 0.716
+    - time: 7.4
+      rms: 0.134
+      peak: 0.49
+    - time: 7.5
+      rms: 0.065
+      peak: 0.237
+    - time: 7.6
+      rms: 0.052
+      peak: 0.204
+    - time: 7.7
+      rms: 0.047
+      peak: 0.171
+    - time: 7.8
+      rms: 0.073
+      peak: 0.216
+    - time: 7.9
+      rms: 0.105
+      peak: 0.315
+    - time: 8
+      rms: 0.182
+      peak: 0.592
+    - time: 8.1
+      rms: 0.229
+      peak: 0.799
+    - time: 8.2
+      rms: 0.226
+      peak: 0.738
+    - time: 8.3
+      rms: 0.171
+      peak: 0.463
+    - time: 8.4
+      rms: 0.021
+      peak: 0.067
+    - time: 8.5
+      rms: 0.017
+      peak: 0.057
+    - time: 8.6
+      rms: 0.011
+      peak: 0.038
+    - time: 8.7
+      rms: 0.013
+      peak: 0.041
+    - time: 8.8
+      rms: 0.015
+      peak: 0.039
+    - time: 8.9
+      rms: 0.013
+      peak: 0.041
+    - time: 9
+      rms: 0.006
+      peak: 0.02
+    - time: 9.1
+      rms: 0.005
+      peak: 0.016
+    - time: 9.2
+      rms: 0.005
+      peak: 0.013
+    - time: 9.3
+      rms: 0.004
+      peak: 0.011
+    - time: 9.4
+      rms: 0.003
+      peak: 0.009
+    - time: 9.5
+      rms: 0.003
+      peak: 0.007
+    - time: 9.6
+      rms: 0.002
+      peak: 0.007
+    - time: 9.7
+      rms: 0.002
+      peak: 0.005
+    - time: 9.8
+      rms: 0.001
+      peak: 0.003
+    - time: 9.9
+      rms: 0.001
+      peak: 0.002
+    - time: 10
+      rms: 0
+      peak: 0.002
+    - time: 10.1
+      rms: 0
+      peak: 0.001
+    - time: 10.2
+      rms: 0
+      peak: 0
+    - time: 10.3
+      rms: 0
+      peak: 0
+    - time: 10.4
+      rms: 0
+      peak: 0
+    - time: 10.5
+      rms: 0
+      peak: 0
+    - time: 10.6
+      rms: 0
+      peak: 0
+    - time: 10.7
+      rms: 0
+      peak: 0
+    - time: 10.8
+      rms: 0
+      peak: 0
+    - time: 10.9
+      rms: 0
+      peak: 0
+sections:
+  - start: 0
+    end: 0.8
+    label: intro_hook
+    avg_rms: 0.215
+  - start: 0.8
+    end: 2
+    label: driving_phrase
+    avg_rms: 0.253
+  - start: 2
+    end: 3.2
+    label: peak_energy
+    avg_rms: 0.3
+  - start: 3.2
+    end: 4.4
+    label: driving_phrase
+    avg_rms: 0.254
+  - start: 4.4
+    end: 5.8
+    label: driving_phrase
+    avg_rms: 0.239
+  - start: 5.8
+    end: 7.2
+    label: driving_phrase
+    avg_rms: 0.223
+  - start: 7.2
+    end: 8.4
+    label: driving_phrase
+    avg_rms: 0.153
+  - start: 8.4
+    end: 11.03
+    label: breakdown_silence
+    avg_rms: 0.008
+spectral:
+  dominant_key: C#m
+  key_confidence: 0.68
+  frequency_bands:
+    sub:
+      range: 20-80Hz
+      avg_energy: 0.146
+    bass:
+      range: 80-250Hz
+      avg_energy: 0.093
+    mid:
+      range: 250-2kHz
+      avg_energy: 0.307
+    high:
+      range: 2k-8kHz
+      avg_energy: 0.299
+    air:
+      range: 8k-20kHz
+      avg_energy: 0.152

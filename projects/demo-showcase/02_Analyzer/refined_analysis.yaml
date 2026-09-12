@@ -1,0 +1,19 @@
+project: "demo-showcase"
+version: 1.0.0
+fps: 30
+resolution:
+  width: 1920
+  height: 1080
+scenes:
+  - id: "scene_01"
+    start_frame: 0
+    duration_frames: 90
+    cut_type: "hard_cut"
+    keyframe_snapshots:
+      - "frames/frame_0015.jpg"
+      - "frames/frame_0045.jpg"
+    visual_motifs:
+      - "Kinetic typography zoom"
+      - "Atmospheric gradient glow"
+    transitions:
+      exit: "slideLeft"

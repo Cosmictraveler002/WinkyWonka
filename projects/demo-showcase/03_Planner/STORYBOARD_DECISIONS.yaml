@@ -1,0 +1,7 @@
+project: demo-showcase
+decisions:
+  - id: D001
+    timestamp: 2026-09-12T13:08:43.539Z
+    topic: D001
+    human_decision: Direct full-screen product hero shot with dynamic camera push-in
+    reason: Provides higher visual impact

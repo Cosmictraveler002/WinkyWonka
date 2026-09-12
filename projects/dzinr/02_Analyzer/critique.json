@@ -1,0 +1,105 @@
+{
+  "project": "dzinr",
+  "timestamp": "2026-09-12T15:58:33.729Z",
+  "overallScore": 100,
+  "contactSheets": [
+    {
+      "mode": "storyboard",
+      "manifestPath": "C:\\Users\\PC\\myapps\\Remotion\\projects\\dzinr\\02_Analyzer\\contact_sheets_storyboard\\contact-sheet-manifest.json",
+      "sheets": [
+        "contact_001.jpg",
+        "contact_002.jpg",
+        "contact_003.jpg"
+      ],
+      "totalFrames": 35
+    }
+  ],
+  "scenes": [
+    {
+      "scene": "scene_01",
+      "title": "Abstract Geometric Cluster",
+      "status": "passed",
+      "score": 100,
+      "checks": [
+        "strong opening hook",
+        "intentional shot duration contrast (non-uniform rhythm)",
+        "clean, authored visual direction (no AI-slop tropes)",
+        "visual contact sheets verified (8 keyframe(s) inspected)"
+      ],
+      "issues": []
+    },
+    {
+      "scene": "scene_02",
+      "title": "Minimalist Laptop Formation",
+      "status": "passed",
+      "score": 100,
+      "checks": [
+        "intentional shot duration contrast (non-uniform rhythm)",
+        "clean, authored visual direction (no AI-slop tropes)",
+        "visual contact sheets verified (5 keyframe(s) inspected)"
+      ],
+      "issues": []
+    },
+    {
+      "scene": "scene_03",
+      "title": "Kinetic Logo Designing Zoom",
+      "status": "passed",
+      "score": 100,
+      "checks": [
+        "intentional shot duration contrast (non-uniform rhythm)",
+        "clean, authored visual direction (no AI-slop tropes)",
+        "visual contact sheets verified (5 keyframe(s) inspected)"
+      ],
+      "issues": []
+    },
+    {
+      "scene": "scene_04",
+      "title": "Variable Typographic Branding",
+      "status": "passed",
+      "score": 100,
+      "checks": [
+        "intentional shot duration contrast (non-uniform rhythm)",
+        "clean, authored visual direction (no AI-slop tropes)",
+        "visual contact sheets verified (5 keyframe(s) inspected)"
+      ],
+      "issues": []
+    },
+    {
+      "scene": "scene_05",
+      "title": "Website Design Inversion Slide",
+      "status": "passed",
+      "score": 100,
+      "checks": [
+        "intentional shot duration contrast (non-uniform rhythm)",
+        "clean, authored visual direction (no AI-slop tropes)",
+        "visual contact sheets verified (3 keyframe(s) inspected)"
+      ],
+      "issues": []
+    },
+    {
+      "scene": "scene_06",
+      "title": "Rotating Wireframe Crest",
+      "status": "passed",
+      "score": 100,
+      "checks": [
+        "intentional shot duration contrast (non-uniform rhythm)",
+        "clean, authored visual direction (no AI-slop tropes)",
+        "visual contact sheets verified (5 keyframe(s) inspected)"
+      ],
+      "issues": []
+    },
+    {
+      "scene": "scene_07",
+      "title": "Kalaकृति Brand Payoff & URL",
+      "status": "passed",
+      "score": 100,
+      "checks": [
+        "intentional shot duration contrast (non-uniform rhythm)",
+        "clean, authored visual direction (no AI-slop tropes)",
+        "compelling closing visual payoff",
+        "visual contact sheets verified (4 keyframe(s) inspected)"
+      ],
+      "issues": []
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+project: demo-showcase
+fps: 30
+width: 1920
+height: 1080
+totalDurationFrames: 220
+totalDurationSeconds: 9
+scenes:
+  - id: scene_01
+    title: Kinetic Intro
+    duration_in_frames: 75
+    duration_in_seconds: 3
+    transition_to_next: slideLeft
+    transition_duration: 15
+    required_assets: []
+  - id: scene_02
+    title: 3D Particle Showcase
+    duration_in_frames: 55
+    duration_in_seconds: 3
+    transition_to_next: crossFade
+    transition_duration: 15
+    required_assets:
+      - asset_product_01
+  - id: scene_03
+    title: Production Ready Outro
+    duration_in_frames: 90
+    duration_in_seconds: 3
+    required_assets:
+      - asset_product_01
+assetBindings:
+  asset_product_01: projects/demo-showcase/asset_product_01.png

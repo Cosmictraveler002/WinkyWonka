@@ -1,0 +1,8 @@
+project: demo-showcase
+version: v001
+audited_at: 2026-09-12T13:34:34.804Z
+rulebook: Motion Video & Ad Creative Rulebook (creative_rulebook.md)
+passed: true
+score: 100
+total_checks: 7
+issues: []

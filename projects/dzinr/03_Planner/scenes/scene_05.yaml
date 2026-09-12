@@ -1,0 +1,25 @@
+id: scene_05
+title: "Website Design Inversion Slide"
+duration_in_frames: 30
+duration_in_seconds: 1.0
+transition_to_next: cut
+elements:
+  - type: WebsiteGridSlide
+    role: "Inversion cut to black; 'WEBSITE design' sliding along grid lines with vermilion 'design'"
+    motion: "Fast 45-degree slide-in with deep bass impact"
+    accent_color: "#FF3B1D"
+shots:
+  - shot_id: shot_05
+    start_frame: 120
+    end_frame: 150
+    duration_frames: 30
+    duration_seconds: 1.0
+    purpose: contrast
+    attention_target: "'WEBSITE design' typography with vermilion accent on 'design'"
+    secondary_target: "Sliding architectural grid lines"
+    viewer_should_notice: "Dramatic canvas flip to pitch black; text sliding into place with electric vermilion highlight"
+    viewer_should_understand: "Third core service: High-end website design & digital experiences"
+    viewer_should_feel: "Impactful, modern, and decisive"
+    complexity: medium
+    attention_load: medium
+    creative_rationale: "Inversion cut to black introduces the brand's dark mode and accent color"

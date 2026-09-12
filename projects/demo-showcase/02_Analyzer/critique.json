@@ -1,0 +1,71 @@
+{
+  "project": "demo-showcase",
+  "timestamp": "2026-09-12T13:24:29.924Z",
+  "overallScore": 100,
+  "contactSheets": [
+    {
+      "mode": "storyboard",
+      "manifestPath": "C:\\Users\\PC\\myapps\\Remotion\\projects\\demo-showcase\\02_Analyzer\\contact_sheets_storyboard\\contact-sheet-manifest.json",
+      "sheets": [
+        "contact_001.jpg",
+        "contact_002.jpg"
+      ],
+      "totalFrames": 15
+    },
+    {
+      "mode": "motion",
+      "manifestPath": "C:\\Users\\PC\\myapps\\Remotion\\projects\\demo-showcase\\02_Analyzer\\contact_sheets_motion\\contact-sheet-manifest.json",
+      "sheets": [
+        "contact_001.jpg",
+        "contact_002.jpg",
+        "contact_003.jpg"
+      ],
+      "totalFrames": 33
+    }
+  ],
+  "scenes": [
+    {
+      "scene": "scene_01",
+      "title": "Kinetic Intro",
+      "status": "passed",
+      "score": 100,
+      "checks": [
+        "strong opening hook",
+        "balanced entrance timing",
+        "intentional shot duration contrast (non-uniform rhythm)",
+        "clean, authored visual direction (no AI-slop tropes)",
+        "visual contact sheets verified (19 keyframe(s) inspected)"
+      ],
+      "issues": []
+    },
+    {
+      "scene": "scene_02",
+      "title": "3D Particle Showcase",
+      "status": "passed",
+      "score": 100,
+      "checks": [
+        "clear typographical hierarchy",
+        "balanced entrance timing",
+        "intentional shot duration contrast (non-uniform rhythm)",
+        "clean, authored visual direction (no AI-slop tropes)",
+        "visual contact sheets verified (12 keyframe(s) inspected)"
+      ],
+      "issues": []
+    },
+    {
+      "scene": "scene_03",
+      "title": "Production Ready Outro",
+      "status": "passed",
+      "score": 100,
+      "checks": [
+        "clear typographical hierarchy",
+        "balanced entrance timing",
+        "intentional shot duration contrast (non-uniform rhythm)",
+        "clean, authored visual direction (no AI-slop tropes)",
+        "compelling closing visual payoff",
+        "visual contact sheets verified (17 keyframe(s) inspected)"
+      ],
+      "issues": []
+    }
+  ]
+}

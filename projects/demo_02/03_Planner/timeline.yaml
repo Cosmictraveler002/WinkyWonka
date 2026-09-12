@@ -1,0 +1,23 @@
+project: demo_02
+fps: 30
+width: 1920
+height: 1080
+rhythm_template: Template D (3:2:1)
+pacing_curve: FAST_HOOK -> ACCELERATE -> IMPACT_PAYOFF
+scenes:
+  - id: scene_01
+    title: Opening Hook
+    duration_in_frames: 75
+    duration_in_seconds: 2.5
+    transition_to_next: slideLeft
+    transition_duration: 15
+  - id: scene_02
+    title: Feature Showcase
+    duration_in_frames: 55
+    duration_in_seconds: 1.83
+    transition_to_next: crossFade
+    transition_duration: 15
+  - id: scene_03
+    title: Decisive Payoff & CTA
+    duration_in_frames: 90
+    duration_in_seconds: 3

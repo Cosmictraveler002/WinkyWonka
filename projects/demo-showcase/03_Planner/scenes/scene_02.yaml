@@ -1,0 +1,26 @@
+scene_id: "scene_02"
+title: "3D Particle Showcase"
+duration_in_frames: 90
+layers:
+  - type: "camera_move"
+    component: "Zoom"
+    params:
+      fromScale: 1.0
+      toScale: 1.08
+  - type: "shader_background"
+    component: "ParticleField"
+    params:
+      color: "#a5b4fc"
+      count: 180
+  - type: "card"
+    component: "GlassCard"
+    delay: 8
+    width: 780
+    layers:
+      - component: "WordReveal"
+        delay: 14
+        text: "PRECISION MOTION GRAPHICS"
+        animation: "rise"
+      - component: "Caption"
+        delay: 28
+        text: "Declarative React components evaluated at 60fps with spring physics and zero hardcoded widgets."

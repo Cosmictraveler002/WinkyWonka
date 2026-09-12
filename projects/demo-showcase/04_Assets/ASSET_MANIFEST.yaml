@@ -1,0 +1,29 @@
+project: demo-showcase
+updatedAt: 2026-09-12T12:59:56.322Z
+totalAssets: 1
+assets:
+  - id: asset_product_01
+    name: Hero Showcase Subject
+    type: product_image
+    source:
+      method: generated
+      path: projects/demo-showcase/04_Assets/scene_02/asset_product_01.png
+      publicPath: projects/demo-showcase/asset_product_01.png
+      originalFileName: candidate_product.png
+    status: approved
+    used_in:
+      - scene_02
+      - scene_03
+    requirements:
+      transparency: true
+      minimumResolution: 1200px
+    validation:
+      passed: true
+      dimensions:
+        width: 1200
+        height: 1200
+      transparency_verified: true
+      issues: []
+    notes:
+      - Resolution 1200x1200px meets requirement (>= 1200px)
+      - Alpha channel transparency verified
