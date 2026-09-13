@@ -28,7 +28,9 @@ Example:
 
 const rootDir = process.cwd();
 const projectDir = path.join(rootDir, 'projects', projectSlug);
-const outputAudioDir = path.join(projectDir, '02_Analyzer', 'audio');
+const audioDir00 = path.join(projectDir, '00_Audio');
+const audioDir02 = path.join(projectDir, '02_Analyzer', 'audio');
+const outputAudioDir = fs.existsSync(audioDir00) ? audioDir00 : audioDir02;
 const targetWavPath = path.join(outputAudioDir, 'ref_audio.wav');
 
 console.log(`\n========================================`);
@@ -61,8 +63,11 @@ for (const dir of candidateVideoPaths) {
   }
 }
 
-// Check for existing raw reference audio
+// Check for existing raw reference audio or user-provided soundtrack
 const candidateAudioPaths = [
+  path.join(audioDir00, 'soundtrack.wav'),
+  path.join(audioDir00, 'ref_audio.wav'),
+  path.join(audioDir02, 'ref_audio.wav'),
   targetWavPath,
   path.join(rootDir, 'public', 'projects', projectSlug, 'ref_audio.wav'),
   path.join(projectDir, '01_Reference', 'audio', 'ref_audio.wav'),
@@ -120,6 +125,14 @@ if (!extractionSuccess) {
   console.error(`❌ Could not extract audio: no reference video or WAV found for "${projectSlug}".`);
   console.error(`   Place an .mp4 in projects/${projectSlug}/01_Reference/video/ or ref_audio.wav in public/projects/${projectSlug}/`);
   process.exit(1);
+}
+
+// Mirror audio to secondary directory if both exist
+const secondaryDir = outputAudioDir === audioDir00 ? audioDir02 : audioDir00;
+if (fs.existsSync(secondaryDir)) {
+  try {
+    fs.copyFileSync(targetWavPath, path.join(secondaryDir, 'ref_audio.wav'));
+  } catch {}
 }
 
 // 4. Validate output WAV

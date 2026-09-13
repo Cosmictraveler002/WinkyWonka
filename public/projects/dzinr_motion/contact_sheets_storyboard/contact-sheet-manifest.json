@@ -1,0 +1,295 @@
+{
+  "source": "dzinr-motion (Remotion)",
+  "fps": 30,
+  "duration": 11.03,
+  "totalFrameCount": 331,
+  "mode": "storyboard",
+  "samplingStrategy": "scene_aware",
+  "sheetDimensions": {
+    "thumbnailWidth": 400,
+    "thumbnailHeight": 225,
+    "metadataHeight": 32,
+    "totalWidth": 1600,
+    "totalHeight": 771,
+    "columns": 4,
+    "rows": 3
+  },
+  "sheets": [
+    {
+      "file": "contact_001.jpg",
+      "frames": [
+        {
+          "frame": 2,
+          "time": 0.067,
+          "timestamp": "00:00.07",
+          "scene": "scene_01",
+          "shot": "shot_01",
+          "row": 0,
+          "column": 0
+        },
+        {
+          "frame": 19,
+          "time": 0.633,
+          "timestamp": "00:00.63",
+          "scene": "scene_01",
+          "shot": "shot_01",
+          "row": 0,
+          "column": 1
+        },
+        {
+          "frame": 27,
+          "time": 0.9,
+          "timestamp": "00:00.90",
+          "scene": "scene_01",
+          "shot": "shot_02",
+          "row": 0,
+          "column": 2
+        },
+        {
+          "frame": 41,
+          "time": 1.367,
+          "timestamp": "00:01.37",
+          "scene": "scene_01",
+          "shot": "shot_02",
+          "row": 0,
+          "column": 3
+        },
+        {
+          "frame": 43,
+          "time": 1.433,
+          "timestamp": "00:01.43",
+          "scene": "scene_01",
+          "shot": "shot_02",
+          "row": 1,
+          "column": 0
+        },
+        {
+          "frame": 52,
+          "time": 1.733,
+          "timestamp": "00:01.73",
+          "scene": "scene_01",
+          "shot": "shot_02",
+          "row": 1,
+          "column": 1
+        },
+        {
+          "frame": 54,
+          "time": 1.8,
+          "timestamp": "00:01.80",
+          "scene": "scene_01",
+          "shot": "shot_02",
+          "row": 1,
+          "column": 2
+        },
+        {
+          "frame": 60,
+          "time": 2,
+          "timestamp": "00:02.00",
+          "scene": "scene_02",
+          "shot": "shot_02",
+          "row": 1,
+          "column": 3
+        },
+        {
+          "frame": 68,
+          "time": 2.267,
+          "timestamp": "00:02.27",
+          "scene": "scene_02",
+          "shot": "shot_02",
+          "row": 2,
+          "column": 0
+        },
+        {
+          "frame": 73,
+          "time": 2.433,
+          "timestamp": "00:02.43",
+          "scene": "scene_02",
+          "shot": "shot_02",
+          "row": 2,
+          "column": 1
+        },
+        {
+          "frame": 79,
+          "time": 2.633,
+          "timestamp": "00:02.63",
+          "scene": "scene_02",
+          "shot": "shot_02",
+          "row": 2,
+          "column": 2
+        },
+        {
+          "frame": 84,
+          "time": 2.8,
+          "timestamp": "00:02.80",
+          "scene": "scene_03",
+          "shot": "shot_02",
+          "row": 2,
+          "column": 3
+        }
+      ]
+    },
+    {
+      "file": "contact_002.jpg",
+      "frames": [
+        {
+          "frame": 89,
+          "time": 2.967,
+          "timestamp": "00:02.97",
+          "scene": "scene_03",
+          "shot": "shot_02",
+          "row": 0,
+          "column": 0
+        },
+        {
+          "frame": 95,
+          "time": 3.167,
+          "timestamp": "00:03.17",
+          "scene": "scene_03",
+          "shot": "shot_02",
+          "row": 0,
+          "column": 1
+        },
+        {
+          "frame": 100,
+          "time": 3.333,
+          "timestamp": "00:03.33",
+          "scene": "scene_03",
+          "shot": "shot_02",
+          "row": 0,
+          "column": 2
+        },
+        {
+          "frame": 102,
+          "time": 3.4,
+          "timestamp": "00:03.40",
+          "scene": "scene_03",
+          "shot": "shot_02",
+          "row": 0,
+          "column": 3
+        },
+        {
+          "frame": 108,
+          "time": 3.6,
+          "timestamp": "00:03.60",
+          "scene": "scene_04",
+          "shot": "shot_02",
+          "row": 1,
+          "column": 0
+        },
+        {
+          "frame": 116,
+          "time": 3.867,
+          "timestamp": "00:03.87",
+          "scene": "scene_04",
+          "shot": "shot_02",
+          "row": 1,
+          "column": 1
+        },
+        {
+          "frame": 121,
+          "time": 4.033,
+          "timestamp": "00:04.03",
+          "scene": "scene_04",
+          "shot": "shot_02",
+          "row": 1,
+          "column": 2
+        },
+        {
+          "frame": 127,
+          "time": 4.233,
+          "timestamp": "00:04.23",
+          "scene": "scene_04",
+          "shot": "shot_02",
+          "row": 1,
+          "column": 3
+        },
+        {
+          "frame": 132,
+          "time": 4.4,
+          "timestamp": "00:04.40",
+          "scene": "scene_05",
+          "shot": "shot_01",
+          "row": 2,
+          "column": 0
+        },
+        {
+          "frame": 140,
+          "time": 4.667,
+          "timestamp": "00:04.67",
+          "scene": "scene_05",
+          "shot": "shot_02",
+          "row": 2,
+          "column": 1
+        },
+        {
+          "frame": 152,
+          "time": 5.067,
+          "timestamp": "00:05.07",
+          "scene": "scene_05",
+          "shot": "shot_02",
+          "row": 2,
+          "column": 2
+        },
+        {
+          "frame": 155,
+          "time": 5.167,
+          "timestamp": "00:05.17",
+          "scene": "scene_05",
+          "shot": "shot_02",
+          "row": 2,
+          "column": 3
+        }
+      ]
+    },
+    {
+      "file": "contact_003.jpg",
+      "frames": [
+        {
+          "frame": 163,
+          "time": 5.433,
+          "timestamp": "00:05.43",
+          "scene": "scene_05",
+          "shot": "shot_02",
+          "row": 0,
+          "column": 0
+        },
+        {
+          "frame": 187,
+          "time": 6.233,
+          "timestamp": "00:06.23",
+          "scene": "scene_06",
+          "shot": "shot_01",
+          "row": 0,
+          "column": 1
+        },
+        {
+          "frame": 203,
+          "time": 6.767,
+          "timestamp": "00:06.77",
+          "scene": "scene_06",
+          "shot": "shot_02",
+          "row": 0,
+          "column": 2
+        },
+        {
+          "frame": 235,
+          "time": 7.833,
+          "timestamp": "00:07.83",
+          "scene": "scene_06",
+          "shot": "shot_02",
+          "row": 0,
+          "column": 3
+        },
+        {
+          "frame": 254,
+          "time": 8.467,
+          "timestamp": "00:08.47",
+          "scene": "scene_06",
+          "shot": "shot_02",
+          "row": 1,
+          "column": 0
+        }
+      ]
+    }
+  ]
+}

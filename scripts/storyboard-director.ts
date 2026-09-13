@@ -20,6 +20,7 @@ Usage:
   bun scripts/storyboard-director.ts direction <project-slug>                        # Checkpoint 1: Story Direction proposal
   bun scripts/storyboard-director.ts build <project-slug>                            # Checkpoint 2: Compile shot storyboard
   bun scripts/storyboard-director.ts decide <project-slug> <decision-id> "<choice>"  # Record human creative decision
+  bun scripts/storyboard-director.ts approve <project-slug> [user] [notes]           # Checkpoint 3: Record human storyboard approval (Phase 3.7)
   bun scripts/storyboard-director.ts status <project-slug>                           # View storyboard status & checkpoints
   `);
   process.exit(1);
@@ -143,6 +144,33 @@ if (command === 'direction') {
   saveStoryboard(projectDir, manifest);
 
   console.log(`💾 Storyboard re-compiled with decision ${decisionId}.\n`);
+} else if (command === 'approve') {
+  const storyboardPath = path.join(projectDir, '03_Planner', 'STORYBOARD.yaml');
+  if (!fs.existsSync(storyboardPath)) {
+    console.error(`❌ Error: STORYBOARD.yaml not found at ${storyboardPath}`);
+    process.exit(1);
+  }
+
+  const manifest = YAML.parse(fs.readFileSync(storyboardPath, 'utf8'));
+  const approvedBy = process.argv[4] || 'user';
+  const notes = process.argv[5] || 'Explicitly approved by user in chat';
+
+  manifest.human_approval = {
+    status: 'approved',
+    approved_by: approvedBy,
+    approved_at: new Date().toISOString(),
+    notes,
+  };
+
+  fs.writeFileSync(storyboardPath, YAML.stringify(manifest, { indent: 2 }));
+
+  console.log(`\n========================================`);
+  console.log(`🎉 STORYBOARD APPROVED (PHASE 3.7 HUMAN GATE PASSED)`);
+  console.log(`Project: "${projectSlug}"`);
+  console.log(`Approved by: ${approvedBy}`);
+  console.log(`Timestamp: ${manifest.human_approval.approved_at}`);
+  console.log(`========================================`);
+  console.log(`Phase 4 Builder Agent and automated pipelines are now UNLOCKED.\n`);
 } else if (command === 'status') {
   const storyboardPath = path.join(projectDir, '03_Planner', 'STORYBOARD.yaml');
   const decisionsPath = path.join(projectDir, '03_Planner', 'STORYBOARD_DECISIONS.yaml');
@@ -159,16 +187,21 @@ if (command === 'direction') {
 
   const manifest: StoryboardManifest = YAML.parse(fs.readFileSync(storyboardPath, 'utf8'));
   console.log(`Version: ${manifest.version}`);
+  const approvalStatus = manifest.human_approval?.status === 'approved'
+    ? `✓ APPROVED (by ${manifest.human_approval.approved_by} on ${manifest.human_approval.approved_at})`
+    : '⏳ PENDING (Phase 3.7 Human Gate requires user sign-off)';
+  console.log(`Human Approval: ${approvalStatus}`);
   console.log(`Duration: ${manifest.total_duration_seconds}s (${manifest.total_duration_frames} frames)`);
   console.log(`Scenes: ${manifest.scenes.length}`);
 
   let totalShots = 0;
   for (const sc of manifest.scenes) {
-    totalShots += sc.shots.length;
-    console.log(`  • ${sc.id} ("${sc.title}"): ${sc.shots.length} shots (${sc.total_duration_seconds}s)`);
+    const shotCount = (sc.shots || []).length;
+    totalShots += shotCount;
+    console.log(`  • ${sc.id} ("${sc.title}"): ${shotCount} shots (${sc.total_duration_seconds}s)`);
   }
   console.log(`\nTotal Shots: ${totalShots}`);
-  console.log(`Required External Assets: ${manifest.asset_requirements.length}`);
+  console.log(`Required External Assets: ${(manifest.asset_requirements || []).length}`);
 
   // Rulebook status
   const auditResult = fs.existsSync(auditPath)

@@ -1,0 +1,35 @@
+project: dzinr_motion
+brand_name: "kalaकृति"
+website_url: "kalakritico.in"
+fps: 30
+width: 1920
+height: 1080
+total_duration_frames: 331
+total_duration_seconds: 11.03
+rhythm_template: "Template B (Burst -> Hold -> Burst -> Payoff)"
+pacing_curve: "HOOK (54f) → PRODUCT (42f) → IDENTITY (36f) → 3D_WEB (42f) → INVERSION_HOLD (51f) → KALA_PAYOFF (106f)"
+scenes:
+  - id: scene_01
+    title: "The Kinetic Hook (Creative Engineering)"
+    duration_in_frames: 54
+    duration_in_seconds: 1.80
+  - id: scene_02
+    title: "Product Design & Custom Software"
+    duration_in_frames: 42
+    duration_in_seconds: 1.40
+  - id: scene_03
+    title: "Logo Design & Brand Identities"
+    duration_in_frames: 36
+    duration_in_seconds: 1.20
+  - id: scene_04
+    title: "3D Websites & Web Development"
+    duration_in_frames: 42
+    duration_in_seconds: 1.40
+  - id: scene_05
+    title: "Engineering Process & Tonal Inversion"
+    duration_in_frames: 51
+    duration_in_seconds: 1.70
+  - id: scene_06
+    title: "Kalaकृति Brand Payoff & URL"
+    duration_in_frames: 106
+    duration_in_seconds: 3.53

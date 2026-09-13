@@ -1,0 +1,140 @@
+project: dzinr_motion
+strategy: beat_align_remix
+video_duration_seconds: 11.033
+video_total_frames: 331
+crossfade_ms: 15
+fade_out:
+  start: 9.53
+  curve: exponential
+  power: 1.5
+mastering:
+  reverb_wet: 0.12
+  compression:
+    threshold: 0.45
+    ratio: 3
+    attack_ms: 5
+    release_ms: 100
+  target_peak: 0.95
+  limiter_overdrive: 1.1
+  remove_dc: true
+alignment_report:
+  - scene: scene_01
+    cut_frame: 0
+    cut_time: 0
+    nearest_transient: 0.22
+    offset_ms: 220
+    quality: acceptable
+  - scene: scene_02
+    cut_frame: 54
+    cut_time: 1.8
+    nearest_transient: 1.77
+    offset_ms: 30
+    quality: perfect
+  - scene: scene_03
+    cut_frame: 96
+    cut_time: 3.2
+    nearest_transient: 3.33
+    offset_ms: 130
+    quality: acceptable
+  - scene: scene_04
+    cut_frame: 132
+    cut_time: 4.4
+    nearest_transient: 4.21
+    offset_ms: 190
+    quality: acceptable
+  - scene: scene_05
+    cut_frame: 174
+    cut_time: 5.8
+    nearest_transient: 5.78
+    offset_ms: 20
+    quality: perfect
+  - scene: scene_06
+    cut_frame: 225
+    cut_time: 7.5
+    nearest_transient: 7.33
+    offset_ms: 170
+    quality: acceptable
+segments:
+  - scene: scene_01
+    video:
+      start: 0
+      end: 1.8
+    source:
+      start: 0
+      end: 1.8
+    gain: 1.05
+    notes: Opening punch - direct from ref beginning
+  - scene: scene_02
+    video:
+      start: 1.8
+      end: 3.2
+    source:
+      start: 1.8
+      end: 3.2
+    gain: 1
+    notes: Direct energy mapping for scene_02
+  - scene: scene_03
+    video:
+      start: 3.2
+      end: 4.4
+    source:
+      start: 3.2
+      end: 4.4
+    gain: 1
+    notes: Direct energy mapping for scene_03
+  - scene: scene_04
+    video:
+      start: 4.4
+      end: 5.8
+    source:
+      start: 4.4
+      end: 5.8
+    gain: 1
+    notes: Direct energy mapping for scene_04
+  - scene: scene_05
+    video:
+      start: 5.8
+      end: 7.5
+    source:
+      start: 5.8
+      end: 7.5
+    gain: 1
+    notes: Direct energy mapping for scene_05
+  - scene: scene_06_tension
+    video:
+      start: 7.5
+      end: 8
+    source:
+      start: 7.5
+      end: 8
+    gain: 0.7
+    notes: Tension vacuum breakdown before logo drop
+  - scene: scene_06_logo_drop
+    video:
+      start: 8
+      end: 9
+    source:
+      start: 2.4
+      end: 3.4
+    gain: 1.15
+    notes: Hero logo drop using remapped peak reference hit
+  - scene: scene_06_outro
+    video:
+      start: 9
+      end: 11.033
+    source:
+      start: 3.4
+      end: 5.433
+    gain: 0.6
+    notes: Resolution outro fading to black
+  - scene: scene_06_sub_bass
+    video:
+      start: 8
+      end: 10.5
+    type: synthetic_sub_bass
+    params:
+      frequency: 36.71
+      duration: 2.5
+      pitch_bend: true
+      gain: 0.45
+    notes: Sub-bass reinforcement under logo slam

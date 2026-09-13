@@ -248,4 +248,11 @@ export const ProjectComposition: React.FC = () => {
 `
 );
 
+// Initialize Phase & Progress Tracker
+const { spawnSync } = await import('node:child_process');
+spawnSync(process.execPath, ['scripts/phase-tracker.ts', 'sync', projectSlug], {
+  stdio: 'inherit',
+  cwd: rootDir,
+});
+
 console.log(`✅ Successfully scaffolded project "${projectSlug}" at: projects/${projectSlug}`);

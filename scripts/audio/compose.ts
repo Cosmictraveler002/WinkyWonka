@@ -35,7 +35,12 @@ Example:
 const rootDir = process.cwd();
 const projectDir = path.join(rootDir, 'projects', projectSlug);
 const audioMapPath = path.join(projectDir, '03_Planner', 'audio_map.yaml');
-const refAudioPath = path.join(projectDir, '02_Analyzer', 'audio', 'ref_audio.wav');
+const refAudioCandidates = [
+  path.join(projectDir, '00_Audio', 'ref_audio.wav'),
+  path.join(projectDir, '00_Audio', 'soundtrack.wav'),
+  path.join(projectDir, '02_Analyzer', 'audio', 'ref_audio.wav'),
+];
+const refAudioPath = refAudioCandidates.find(p => fs.existsSync(p)) || refAudioCandidates[0];
 const outputDir = path.join(projectDir, '04_Assets', 'audio');
 const rawOutputPath = path.join(outputDir, 'soundtrack_raw.wav');
 
@@ -50,7 +55,7 @@ if (!fs.existsSync(audioMapPath)) {
 }
 
 if (!fs.existsSync(refAudioPath)) {
-  console.error(`❌ Reference audio not found: ${refAudioPath}`);
+  console.error(`❌ Reference audio not found in 00_Audio/ or 02_Analyzer/audio/.`);
   console.error(`   Run step 1 first: bun run audio:extract ${projectSlug}`);
   process.exit(1);
 }

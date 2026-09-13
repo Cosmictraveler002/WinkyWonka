@@ -5,7 +5,7 @@ description: AI Motion Director and Orchestration Harness for high-end Remotion 
 
 # Remotion Motion Director Skill
 
-This skill governs your role as the **AI Motion Graphics Orchestrator & Director** within the Remotion Motion Harness. Follow this exact protocol to transform raw reference media into high-aesthetic, frame-accurate Remotion animations using parameterized primitives and the Critic Agent feedback loop.
+This skill governs your role as the **AI Motion Graphics Orchestrator & Director** within the Remotion Motion Harness. Follow this exact protocol to transform raw reference media into high-aesthetic, frame-accurate Remotion animations using parameterized primitives, audio-first temporal skeleton framing, and the Critic Agent feedback loop.
 
 ---
 
@@ -17,17 +17,21 @@ You MUST strictly follow the directives in [AGENTS.md](file:///c:/Users/PC/myapp
 
 ---
 
-## The 5-Stage Project Architecture
+## The Audio-First Project Architecture
 
-Each video project lives inside `projects/<project-slug>/` with the following rigid hierarchy:
+Each video project lives inside `projects/<project-slug>/` with the following hierarchy:
 
 ```
 projects/<project-slug>/
+├── 00_Audio/                # Foundational soundtrack & beat map (before scripting)
+│   ├── soundtrack.wav       # Selected or extracted audio track
+│   ├── analysis.yaml        # BPM, transients, spectral, energy profile
+│   └── temporal_skeleton.yaml # Cut windows, phrase boundaries, hold zones, energy curve
 ├── 01_Reference/            # Raw reference video (.mp4, .mov) and moodboard images
-├── 02_Analyzer/             # Pass 1 Macro report + contact_sheet/ + critique.md + critique.json
-├── 03_Planner/              # core_aesthetic.yaml + timeline.yaml + scenes/scene_XX.yaml
-├── 04_Assets/               # shared/ (fonts, textures) + scene_XX/ (scene-specific images/SVGs)
-└── 05_Code/                 # Composition.tsx + scenes/Scene01.tsx, Scene02.tsx...
+├── 02_Deconstruction/       # Scene snapshots, TEMPORAL & VISUAL analysis, DECONSTRUCTION.yaml
+├── 03_Planner/              # SCRIPT_INTAKE.yaml, SCRIPT.md, SCRIPT_AUDIT.yaml, STORYBOARD.yaml
+├── 04_Assets/               # Co-designed media assets, ASSET_MANIFEST.yaml
+└── 05_Code/                 # Composition.tsx, scenes/Scene01.tsx, Scene02.tsx...
 ```
 
 ---
@@ -56,137 +60,219 @@ Always build scenes using the parameterized motion primitives from `@/shared`. N
 ## 🔄 The Feedback Loop Architecture
 
 ```
-              ┌──────────────┐
-              │ CREATIVE     │
-              │ SPEC (YAML)  │
-              └──────┬───────┘
-                     ↓
-              ┌──────────────┐
-              │ BUILDER      │
-              │ AGENT        │
-              └──────┬───────┘
-                     ↓
-              ┌──────────────┐
-              │ CONTACT      │
-              │ SHEET (HTML) │
-              └──────┬───────┘
-                     ↓
-              ┌──────────────┐
-              │ CRITIC       │
-              │ AGENT        │
-              └──────┬───────┘
-                     ↓
-               PATCH REQUEST
-                     ↓
-              ┌──────────────┐
-              │ REMOTION     │
-              │ STUDIO       │
-              └──────┬───────┘
-                     ↓
-               USER APPROVAL
-                     ↓
-              FINAL MP4 RENDER
+              ┌───────────────────────────┐
+              │ 00_Audio TEMPORAL SKELETON│
+              │ (Beat grid & cut windows) │
+              └─────────────┬─────────────┘
+                            ↓
+              ┌───────────────────────────┐
+              │ 02_Deconstruction YAML    │
+              │ (Motion DNA & visual cues)│
+              └─────────────┬─────────────┘
+                            ↓
+              ┌───────────────────────────┐
+              │ SCRIPT.md & STORYBOARD    │
+              │ (Locked with user in chat)│
+              └─────────────┬─────────────┘
+                            ↓
+              ┌───────────────────────────┐
+              │ BUILDER AGENT             │
+              │ (Remotion TSX primitives) │
+              └─────────────┬─────────────┘
+                            ↓
+              ┌───────────────────────────┐
+              │ IN-CHAT REFINEMENT LOOP   │
+              │ (Draft MP4 & keyframes)   │
+              └─────────────┬─────────────┘
+                            ↓
+              ┌───────────────────────────┐
+              │ CRITIC AGENT VISION AUDIT │
+              │ (Contact sheets & score)  │
+              └─────────────┬─────────────┘
+                            ↓
+              ┌───────────────────────────┐
+              │ STUDIO PREVIEW & APPROVAL │
+              └─────────────┬─────────────┘
+                            ↓
+                     FINAL MP4 RENDER
+```
+
+---
+
+## 📊 Universal Phase & Progress Tracking Protocol
+
+Every video project maintains an automated, self-synchronizing `PHASE_TRACKER.yaml` and `PROGRESS.md` covering all 14 lifecycle phases:
+
+```powershell
+# View live visual ASCII progress bar & phase table
+& "C:\Users\PC\.bun\bin\bun.exe" run progress <project-slug>
+
+# Full breakdown of deliverables and weights
+& "C:\Users\PC\.bun\bin\bun.exe" run phase:status <project-slug>
+
+# Resync phase tracker from project artifacts
+& "C:\Users\PC\.bun\bin\bun.exe" run phase:sync <project-slug>
+
+# Sign off a human gate (e.g. Phase 3.7 or Phase 8.0)
+& "C:\Users\PC\.bun\bin\bun.exe" run phase:approve <project-slug> <phaseNumber>
 ```
 
 ---
 
 ## Step-by-Step Orchestration Protocol
 
-### Phase 1: Ingestion & Multimodal Macro Analysis
-1. Inspect reference files in `01_Reference/videos` and `01_Reference/images`.
-2. Produce `02_Analyzer/macro_aesthetic.md` detailing visual tone, motion physics, and component palette.
+### Phase 1: Reference Deconstruction
 
-### Phase 2: Frame Snapshot Extraction
-1. Run snapshot extraction:
+#### Phase 1A: Temporal Deconstruction
+1. Watch the reference video in `01_Reference/video/` using multimodal understanding.
+2. Analyze total duration, cut points, pacing, intention, hook type, and global rhythm template.
+3. Write `02_Deconstruction/TEMPORAL_ANALYSIS.yaml`.
+
+#### Phase 1B: Visual Deconstruction (Scene Snapshots)
+1. Extract entry, apex, and exit snapshots for each detected scene:
    ```powershell
-   & "C:\Users\PC\.bun\bin\bun.exe" scripts/extract-frames.ts <project-slug> [video-file] interval
+   & "C:\Users\PC\.bun\bin\bun.exe" run deconstruct:frames <project-slug> scene_deconstruct
    ```
-2. Inspect frames and write `02_Analyzer/refined_analysis.yaml`.
+2. Inspect the resulting frames (`scene_XX_entry.jpg`, `scene_XX_apex.jpg`, `scene_XX_exit.jpg`) using `view_file`.
+3. Dissect:
+   - Animation techniques (easing curves, entrance paths, velocity).
+   - Camera movements (pan, tilt, zoom velocity, orbital origin).
+   - Transition mechanics (wipes, cuts, morphs, mask reveals).
+   - Depth layers (background texture, midground elements, foreground focus).
+   - SFX & atmosphere (grain, vignette, procedural noise, chromatic aberration).
+   - Micro-motion (ambient particle drift, badge breathing, kinetic accent trails).
+   - Color palette & typographic hierarchy.
+4. Save `02_Deconstruction/VISUAL_ANALYSIS.yaml` and merge into `02_Deconstruction/DECONSTRUCTION.yaml`.
 
-### Phase 3: Storyboard Director Layer (Creative Planning & Shot Director)
-The agent acts as the **Storyboard Director** (commercial director / storyboard artist / editor) and **MUST STRICTLY FOLLOW** the **Motion Video & Ad Creative Rulebook** ([creative_rulebook.md](file:///c:/Users/PC/myapps/Remotion/creative_rulebook.md)):
-1. **Checkpoint 1 (Story Direction)**:
-   - Formulate core visual idea, visual language, camera language, editing language, performance language, and ending strategy:
-     ```powershell
-     & "C:\Users\PC\.bun\bin\bun.exe" run storyboard:direction <project-slug>
-     ```
-   - Present major creative decisions (e.g. `D001`, `D002`) to the Human Director with viable alternatives.
-   - Record approved decisions:
-     ```powershell
-     & "C:\Users\PC\.bun\bin\bun.exe" scripts/storyboard-director.ts decide <project-slug> <decision-id> "<choice>"
-     ```
-2. **Checkpoint 2 (Shot-by-Shot Storyboard & Perceptual Plan)**:
-   - Compile atomic shots adhering to Section 57 Shot Card Schema with stable IDs (`S01_SH01`), explicit primary `attention_target` (Rule 2), `viewer_should_notice`, `viewer_should_understand`, `viewer_should_feel`, cognitive budget `attention_load` (`low` | `medium` | `high` | `extreme`), timing, framing, camera motion, typography, and audio relations:
-     ```powershell
-     & "C:\Users\PC\.bun\bin\bun.exe" run storyboard:build <project-slug>
-     ```
-   - Enforces the **105 Creative Rulebook Principles**: Active hooks (no static logos), valid shot purposes (delete purposeless shots), cognitive load wave (no $\ge 3$ consecutive extreme loads), and holds for comprehension.
-   - Outputs: `03_Planner/STORYBOARD.yaml`, `03_Planner/RULEBOOK_AUDIT.yaml`, and human-readable `03_Planner/STORYBOARD_NOTES.md`.
-   - If script issues or timing bottlenecks are discovered, emit a formal `SCRIPT_NOTE` in `03_Planner/SCRIPT_FEEDBACK.yaml` for the Script Writer. Never silently rewrite the script!
-3. **Checkpoint 3 (Production Readiness)**:
-   - Storyboard asset dependencies are automatically compiled into `03_Planner/STORYBOARD_ASSET_REQUIREMENTS.yaml` to feed Phase 4 Asset Acquisition.
+#### Phase 1C: Audio Foundation
+1. Ask the user in chat whether they have a soundtrack, or if they want the agent to analyze the reference video audio and search the web for an open-source royalty-free match.
+2. If searching: analyze reference audio with `bun run audio:analyze <project-slug>`, search Pixabay/Free Music Archive/Mixkit for adjacent tracks matching BPM and mood, present 2–3 options with links, and let user pick.
+3. Generate the temporal beat skeleton:
+   ```powershell
+   & "C:\Users\PC\.bun\bin\bun.exe" run audio:skeleton <project-slug>
+   ```
+   Outputs `00_Audio/temporal_skeleton.yaml` with beat grid, phrase boundaries, cut windows, and hold zones.
 
-### Phase 4: Asset Acquisition Layer (Agent as Conversational Asset Coordinator)
-The agent acts as the **Asset Producer & Coordinator** directly in the chat:
-1. **Map Internal Asset Requirements**:
-   - Run requirements mapping to separate procedural Remotion code from external source media:
-     ```powershell
-     & "C:\Users\PC\.bun\bin\bun.exe" run assets:map <project-slug>
-     ```
-2. **Execute the One-Asset-At-A-Time Chat Loop**:
-   - The agent surfaces the next unresolved asset directly in chat using the exact single-asset template:
-     ```text
-     Asset 01 of N — [Asset Name]
-     Reference usage: ...
-     Role: ...
-     I need: ...
-     Choose:
-     [Provide asset] -> Path to your local file
-     [Generate asset] -> Generate high-fidelity asset via generation spec
-     ```
-3. **Conversational Inference & Autonomous File Routing**:
-   - **User Provides Asset**: The user pastes a file path or uploads a media file. The agent infers the path, validates it (`validateImageAsset`), moves/copies the file to `projects/<slug>/04_Assets/<scene>/<asset_id>.<ext>` and `public/projects/<slug>/<asset_id>.<ext>`, and registers it into `ASSET_MANIFEST.yaml` and `VIDEO_SPEC.yaml`.
-   - **User Chooses Generate**: The user says "generate", "Option B", or describes what they want. The agent derives the structured `GenerationSpec`, invokes `generate_image`, validates the resulting artifact, moves/copies it to the designated directories (`04_Assets` and `public/`), and registers it into `ASSET_MANIFEST.yaml` and `VIDEO_SPEC.yaml`.
-   - **Validation Rejection**: If the image fails technical checks (opaque when alpha required, low resolution), explain the issue clearly and ask for replacement or regeneration of THAT SAME ASSET.
-4. **Seamless Workflow Continuation**:
-   - Once the current asset is registered, immediately query for the next unresolved asset.
-   - When all required assets are approved (`bun run assets:status <project-slug>` returns `READY`), the agent automatically transitions into **Phase 5: Declarative Remotion Scene Construction**. Do not stop or ask the user for permission to move files—route them automatically!
+---
 
-### Phase 5: Declarative Remotion Code Generation (Builder Agent)
+### Phase 2: Script & Creative Development
+
+1. **Conduct Structured User Intake**:
+   Present the intake questionnaire in chat (format, audience, emotional goal, primary CTA, core message, duration, brand elements, restrictions).
+   Save answers to `03_Planner/SCRIPT_INTAKE.yaml`.
+2. **Draft Audio-Locked Script**:
+   Draft `03_Planner/SCRIPT.md` with timestamps locked to `temporal_skeleton.yaml` phrase boundaries and strong cut windows.
+
+---
+
+### Phase 2.5: Script & Rhythm Audit
+
+1. Audit `SCRIPT.md` against:
+   - `rhythm_system.md` templates (ensure shot duration non-uniformity).
+   - `temporal_skeleton.yaml` beat grid (verify cuts land on strong cut windows).
+   - `creative_rulebook.md` (active hook, cognitive load balance, hold zones for comprehension).
+   - Anti-AI-copy principles (flag clichés like "experience the future").
+2. Write `03_Planner/SCRIPT_AUDIT.yaml`.
+3. Present audit findings to user and refine script in chat.
+
+---
+
+### Phase 3: Asset Planning & Tech Stack
+
+1. **Map Asset Dependencies**:
+   Distinguish Remotion procedural elements from external source media:
+   ```powershell
+   & "C:\Users\PC\.bun\bin\bun.exe" run assets:map <project-slug>
+   ```
+   Outputs `03_Planner/STORYBOARD_ASSET_REQUIREMENTS.yaml`.
+2. **Map Tech Stack**:
+   Write `03_Planner/TECH_STACK_MAP.yaml` detailing per-scene Remotion primitives, 3D needs, and custom shaders.
+
+---
+
+### Phase 3.5: Interactive Asset Co-Design
+
+1. **Palette First**: Present extracted palette from `DECONSTRUCTION.yaml` for user confirmation or brand adjustment.
+2. **Hero Scene First**: Co-design the primary showcase visual asset before secondary items.
+3. **One-by-One Chat Acquisition**:
+   Surface each required asset using `bun run assets:next <project-slug>`.
+   Support user provide (path/upload) or generate (`generate_image`).
+   Validate and register into `04_Assets/ASSET_MANIFEST.yaml`.
+   (Batch escape supported if user requests autonomous generation.)
+
+---
+
+### Phase 3.7: Storyboard Lock (Human Gate)
+
+1. Rebuild `03_Planner/STORYBOARD.yaml` with concrete assets, confirmed palette, audited script, and audio beat alignment:
+   ```powershell
+   & "C:\Users\PC\.bun\bin\bun.exe" run storyboard:build <project-slug>
+   ```
+2. **MANDATORY HUMAN GATE**: Present locked storyboard to the user for explicit approval before proceeding to Remotion React code build.
+
+---
+
+### Phase 4: Declarative Remotion Code Generation (Builder Agent)
+
 1. Write modular scene components in `05_Code/scenes/Scene01.tsx`, `Scene02.tsx`, etc., using the Parameterized Primitives (`<Headline />`, `<Caption />`, `<ImageReveal />`, `<GradientBackground />`, `<CTA />`).
 2. Compose in `05_Code/Composition.tsx` using `TransitionSeries`.
 3. Register in `src/Root.tsx`.
 
-### Phase 6: AI-Optimized Contact Sheet Generation (Vision Inspection Artifact)
-1. Generate machine-readable contact sheets and manifests before rendering video:
+---
+
+### Phase 5: AI-Optimized Contact Sheet Generation
+
+1. Generate contact sheets:
    ```powershell
-   # Storyboard Mode (sparse structural keyframes: entry, apex, settled, exit)
    & "C:\Users\PC\.bun\bin\bun.exe" run contact:sheets <project-slug> storyboard
-
-   # Motion Mode (dense sequential inspection for motion cadence and continuity)
-   & "C:\Users\PC\.bun\bin\bun.exe" run contact:sheets <project-slug> motion
    ```
-2. The generator extracts keyframes, mounts a 32px high-contrast monospace metadata strip (`023 | 00:04.21 | scene_03 | shot_01`) *underneath* each thumbnail (preserving the full 16:9 frame without overlay clutter), composites multi-sheet grids (`contact_001.jpg`, `contact_002.jpg`), and outputs `contact-sheet-manifest.json` in `02_Analyzer/contact_sheets_<mode>/`.
+2. Mounts 32px high-contrast monospace metadata strip underneath each thumbnail (preserving 16:9 ratio).
 
-### Phase 7: Critic Agent Audit & Patch Request Loop
-1. Run the Critic Agent audit:
+---
+
+### Phase 6: Visual Refinement Loop
+
+1. **Render Draft MP4 & Keyframe Stills (Single-pass sequence 25x–30x speedup)**:
+   ```powershell
+   & "C:\Users\PC\.bun\bin\bun.exe" run refine:render <project-slug> --fast-still-only
+   ```
+2. **In-Chat Multimodal Inspection**:
+   Inspect entry, apex, settled, and exit keyframes using `view_file`.
+   Verify typography legibility, color palette harmony, spring settling, and CTA prominence.
+3. **Apply Surgical Patches**:
+   Edit `05_Code/scenes/SceneXX.tsx` and re-render (up to 5 iterations).
+4. **Log Report**:
+   ```powershell
+   & "C:\Users\PC\.bun\bin\bun.exe" run refine:report <project-slug> --verdict=converged --score=98 --notes="All visual objectives verified"
+   ```
+
+---
+
+### Phase 7: Critic Agent Audit & Patch Loop
+
+1. Run Critic Agent audit:
    ```powershell
    & "C:\Users\PC\.bun\bin\bun.exe" run critic:audit <project-slug>
    ```
-2. The Critic evaluates hierarchy, contrast, timing, motion, CTA payoff, and audits the visual contact sheet manifests:
-   - Verifies keyframe coverage for all scenes against `timeline.yaml`.
-   - Emits human-readable `02_Analyzer/critique.md` (with `✓`, `△`, `✗` status marks and visual contact sheet links).
-   - Emits machine-readable `02_Analyzer/critique.json` referencing inspected manifests and sheets.
-3. If issues are identified, the Builder Agent issues surgical patch edits to `SceneXX.tsx`.
+2. Inspects hierarchy, timing, rhythm contrast, AI-slop avoidance, and CTA payoff. Emits `critique.md` and `critique.json`.
+3. Apply surgical patches if score $< 90$ (max 3 autonomous iterations).
 
-### Phase 8: Interactive Studio Review & User Approval
-1. Launch Remotion Studio for user inspection:
+---
+
+### Phase 8: Interactive Studio Review & Mandatory User Approval
+
+1. Launch Remotion Studio:
    ```powershell
    & "C:\Users\PC\.bun\bin\bun.exe" run dev
    ```
-2. User inspects the timeline at `http://localhost:3000` and reviews the contact sheet.
-3. **MANDATORY**: Await user permission before initiating the full video render!
-4. On User Approval, execute the final render:
+2. Preview at `http://localhost:3000`.
+3. **MANDATORY DIRECTIVE**: Await explicit user confirmation before full render!
+
+---
+
+### Phase 9: Production Video Export
+
+1. Upon explicit user approval:
    ```powershell
-   & "C:\Users\PC\.bun\bin\bun.exe" run remotion render src/index.ts <CompositionId> out/<output-name>.mp4
+   & "C:\Users\PC\.bun\bin\bun.exe" run remotion render src/index.ts <CompositionId> out/<project-slug>.mp4
    ```

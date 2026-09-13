@@ -1,0 +1,19 @@
+project: "dzinr_motion"
+assets:
+  - id: "dzinr_creator"
+    name: "Creator Portrait"
+    category: "Source Media"
+    targetScenes: ["scene_05"]
+    localPath: "projects/dzinr_motion/04_Assets/scene_05/creator.jpg"
+    publicPath: "projects/dzinr_motion/creator.jpg"
+    format: "jpg"
+    status: "APPROVED"
+    
+  - id: "dzinr_soundtrack"
+    name: "Mastered Audio Track"
+    category: "Audio"
+    targetScenes: ["scene_01", "scene_02", "scene_03", "scene_04", "scene_05", "scene_06"]
+    localPath: "projects/dzinr_motion/00_Audio/soundtrack.wav"
+    publicPath: "projects/dzinr_motion/soundtrack.wav"
+    format: "wav"
+    status: "APPROVED"

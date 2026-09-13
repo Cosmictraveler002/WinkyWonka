@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dzinr_motion - Refinement Loop (Iteration 8)</title>
+  <style>
+    :root {
+      --bg: #090d16;
+      --card-bg: rgba(255, 255, 255, 0.04);
+      --border: rgba(255, 255, 255, 0.1);
+      --primary: #38bdf8;
+      --accent: #f43f5e;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      padding: 2.5rem;
+      min-height: 100vh;
+    }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    h1 { font-size: 2rem; font-weight: 800; }
+    .badge {
+      display: inline-block;
+      padding: 0.3rem 0.8rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      background: rgba(56, 189, 248, 0.15);
+      color: var(--primary);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      margin-bottom: 0.5rem;
+    }
+    .video-section {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+    video {
+      width: 100%;
+      max-height: 540px;
+      border-radius: 8px;
+      background: #000;
+    }
+    .scene-block {
+      margin-bottom: 2.5rem;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.5rem;
+    }
+    .scene-header {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      color: var(--primary);
+      display: flex;
+      justify-content: space-between;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.25rem;
+    }
+    .frame-card {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .frame-card img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      display: block;
+      cursor: pointer;
+    }
+    .frame-meta {
+      padding: 1rem;
+      font-size: 0.85rem;
+    }
+    .tag {
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--primary);
+    }
+    .obj {
+      margin-top: 0.5rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+    .obj strong { color: #e2e8f0; }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <span class="badge">Visual Refinement Loop • Iteration 8 of 10</span>
+      <h1>dzinr_motion</h1>
+      <div style="color: var(--text-muted); margin-top: 0.4rem;">
+        Total Duration: 331 frames (11.0s) | FPS: 30 | Scale: 0.5x
+      </div>
+    </div>
+  </header>
+
+  
+
+  <main>
+    
+      <section class="scene-block">
+        <div class="scene-header">
+          <span>The Kinetic Hook (Creative Engineering) (scene_01)</span>
+          <span style="font-size: 0.9rem; color: var(--text-muted);">54 frames</span>
+        </div>
+        <div class="grid">
+          
+            <div class="frame-card">
+              <img src="scene_01_entry_f0008.jpg" alt="scene_01_entry" onclick="window.open('scene_01_entry_f0008.jpg', '_blank')">
+              <div class="frame-meta">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                  <span class="tag">entry</span>
+                  <span style="color: var(--text-muted);">Frame 8 (00:00.27)</span>
+                </div>
+                <div class="obj"><strong>🎯 Target:</strong> Subject focus</div>
+                
+                
+              </div>
+            </div>
+          
+            <div class="frame-card">
+              <img src="scene_01_apex_f0027.jpg" alt="scene_01_apex" onclick="window.open('scene_01_apex_f0027.jpg', '_blank')">
+              <div class="frame-meta">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                  <span class="tag">apex</span>
+                  <span style="color: var(--text-muted);">Frame 27 (00:00.90)</span>
+                </div>
+                <div class="obj"><strong>🎯 Target:</strong> Subject focus</div>
+                
+                
+              </div>
+            </div>
+          
+            <div class="frame-card">
+              <img src="scene_01_settled_f0048.jpg" alt="scene_01_settled" onclick="window.open('scene_01_settled_f0048.jpg', '_blank')">
+              <div class="frame-meta">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                  <span class="tag">settled</span>
+                  <span style="color: var(--text-muted);">Frame 48 (00:01.60)</span>
+                </div>
+                <div class="obj"><strong>🎯 Target:</strong> Subject focus</div>
+                
+                
+              </div>
+            </div>
+          
+            <div class="frame-card">
+              <img src="scene_01_exit_f0052.jpg" alt="scene_01_exit" onclick="window.open('scene_01_exit_f0052.jpg', '_blank')">
+              <div class="frame-meta">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                  <span class="tag">exit</span>
+                  <span style="color: var(--text-muted);">Frame 52 (00:01.73)</span>
+                </div>
+                <div class="obj"><strong>🎯 Target:</strong> Subject focus</div>
+                
+                
+              </div>
+            </div>
+          
+        </div>
+      </section>
+      
+      <section class="scene-block">
+        <div class="scene-header">
+          <span>Product Design & Custom Software (scene_02)</span>
+          <span style="font-size: 0.9rem; color: var(--text-muted);">42 frames</span>
+        </div>
+        <div class="grid">
+          
+            <div class="frame-card">
+              <img src="scene_02_entry_f0060.jpg" alt="scene_02_entry" onclick="window.open('scene_02_entry_f0060.jpg', '_blank')">
+              <div class="frame-meta">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                  <span class="tag">entry</span>
+                  <span style="color: var(--text-muted);">Frame 60 (00:02.00)</span>
+                </div>
+                <div class="obj"><strong>🎯 Target:</strong> Subject focus</div>
+                
+                
+              </div>
+            </div>
+          
+            <div class="frame-card">
+              <img src="scene_02_apex_f0075.jpg" alt="scene_02_apex" onclick="window.open('scene_02_apex_f0075.jpg', '_blank')">
+              <div class="frame-meta">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                  <span class="tag">apex</span>
+                  <span style="color: var(--text-muted);">Frame 75 (00:02.50)</span>
+                </div>
+                <div class="obj"><strong>🎯 Target:</strong> Subject focus</div>
+                
+                
+              </div>
+            </div>
+          
+            <div class="frame-card">
+              <img src="scene_02_settled_f0090.jpg" alt="scene_02_settled" onclick="window.open('scene_02_settled_f0090.jpg', '_blank')">
+              <div class="frame-meta">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                  <span class="tag">settled</span>
+                  <span style="color: var(--text-muted);">Frame 90 (00:03.00)</span>
+                </div>
+                <div class="obj"><strong>🎯 Target:</strong> Subject focus</div>
+                
+                
+              </div>
+            </div>
+          
+            <div class="frame-card">
+              <img src="scene_02_exit_f0094.jpg" alt="scene_02_exit" onclick="window.open('scene_02_exit_f0094.jpg', '_blank')">
+              <div class="frame-meta">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                  <span class="tag">exit</span>
+                  <span style="color: var(--text-muted);">Frame 94 (00:03.13)</span>
+                </div>
+                <div class="obj"><strong>🎯 Target:</strong> Subject focus</div>
+                
+                
+              </div>
+            </div>
+          
+        </div>
+      </section>
+      
+      <section class="scene-block">
+        <div class="scene-header">
+          <span>Logo Design & Brand Identities (scene_03)</span>
+          <span style="font-size: 0.9rem; color: var(--text-muted);">36 frames</span>
+        </div>
+        <div class="grid">
+          
+            <div class="frame-card">
+              <img src="scene_03_entry_f0101.jpg" alt="scene_03_entry" onclick="window.open('scene_03_entry_f0101.jpg', '_blank')">
+              <div class="frame-meta">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                  <span class="tag">entry</span>
+                  <span style="color: var(--text-muted);">Frame 101 (00:03.37)</span>
+                </div>
+                <div class="obj"><strong>🎯 Target:</strong> Subject focus</div>
+                
+                
+              </div>
+            </div>
+          
+            <div class="frame-card">
+              <img src="scene_03_apex_f0114.jpg" alt="scene_03_apex" onclick="window.open('scene_03_apex_f0114.jpg', '_blank')">
+              <div class="frame-meta">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                  <span class="tag">apex</span>
+                  <span style="color: var(--text-muted);">Frame 114 (00:03.80)</span>
+                </div>
+                <div class="obj"><strong>🎯 Target:</strong> Subject focus</div>
+                
+                
+              </div>
+            </div>
+          
+            <div class="frame-card">
+              <img src="scene_03_settled_f0127.jpg" alt="scene_03_settled" onclick="window.open('scene_03_settled_f0127.jpg', '_blank')">
+              <div class="frame-meta">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                  <span class="tag">settled</span>
+                  <span style="color: var(--text-muted);">Frame 127 (00:04.23)</span>
+                </div>
+                <div class="obj"><strong>🎯 Target:</strong> Subject focus</div>
+                
+                
+              </div>
+            </div>
+          
+            <div class="frame-card">
+              <img src="scene_03_exit_f0130.jpg" alt="scene_03_exit" onclick="window.open('scene_03_exit_f0130.jpg', '_blank')">
+              <div class="frame-meta">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                  <span class="tag">exit</span>
+                  <span style="color: var(--text-muted);">Frame 130 (00:04.33)</span>
+                </div>
+                <div class="obj"><strong>🎯 Target:</strong> Subject focus</div>
+                
+                
+              </div>
+            </div>
+          
+        </div>
+      </section>
+      
+      <section class="scene-block">
+        <div class="scene-header">
+          <span>3D Websites & Web Development (scene_04)</span>
+          <span style="font-size: 0.9rem; color: var(--text-muted);">42 frames</span>
+        </div>
+        <div class="grid">
+          
+            <div class="frame-card">
+              <img src="scene_04_entry_f0138.jpg" alt="scene_04_entry" onclick="window.open('scene_04_entry_f0138.jpg', '_blank')">
+              <div class="frame-meta">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                  <span class="tag">entry</span>
+                  <span style="color: var(--text-muted);">Frame 138 (00:04.60)</span>
+                </div>
+                <div class="obj"><strong>🎯 Target:</strong> Subject focus</div>
+                
+                
+              </div>
+            </div>
+          
+            <div class="frame-card">
+              <img src="scene_04_apex_f0153.jpg" alt="scene_04_apex" onclick="window.open('scene_04_apex_f0153.jpg', '_blank')">
+              <div class="frame-meta">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                  <span class="tag">apex</span>
+                  <span style="color: var(--text-muted);">Frame 153 (00:05.10)</span>
+                </div>
+                <div class="obj"><strong>🎯 Target:</strong> Subject focus</div>
+                
+                
+              </div>
+            </div>
+          
+            <div class="frame-card">
+              <img src="scene_04_settled_f0168.jpg" alt="scene_04_settled" onclick="window.open('scene_04_settled_f0168.jpg', '_blank')">
+              <div class="frame-meta">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                  <span class="tag">settled</span>
+                  <span style="color: var(--text-muted);">Frame 168 (00:05.60)</span>
+                </div>
+                <div class="obj"><strong>🎯 Target:</strong> Subject focus</div>
+                
+                
+              </div>
+            </div>
+          
+            <div class="frame-card">
+              <img src="scene_04_exit_f0172.jpg" alt="scene_04_exit" onclick="window.open('scene_04_exit_f0172.jpg', '_blank')">
+              <div class="frame-meta">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                  <span class="tag">exit</span>
+                  <span style="color: var(--text-muted);">Frame 172 (00:05.73)</span>
+                </div>
+                <div class="obj"><strong>🎯 Target:</strong> Subject focus</div>
+                
+                
+              </div>
+            </div>
+          
+        </div>
+      </section>
+      
+      <section class="scene-block">
+        <div class="scene-header">
+          <span>Engineering Process & Tonal Inversion (scene_05)</span>
+          <span style="font-size: 0.9rem; color: var(--text-muted);">51 frames</span>
+        </div>
+        <div class="grid">
+          
+            <div class="frame-card">
+              <img src="scene_05_entry_f0182.jpg" alt="scene_05_entry" onclick="window.open('scene_05_entry_f0182.jpg', '_blank')">
+              <div class="frame-meta">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                  <span class="tag">entry</span>
+                  <span style="color: var(--text-muted);">Frame 182 (00:06.07)</span>
+                </div>
+                <div class="obj"><strong>🎯 Target:</strong> Subject focus</div>
+                
+                
+              </div>
+            </div>
+          
+            <div class="frame-card">
+              <img src="scene_05_apex_f0200.jpg" alt="scene_05_apex" onclick="window.open('scene_05_apex_f0200.jpg', '_blank')">
+              <div class="frame-meta">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                  <span class="tag">apex</span>
+                  <span style="color: var(--text-muted);">Frame 200 (00:06.67)</span>
+                </div>
+                <div class="obj"><strong>🎯 Target:</strong> Subject focus</div>
+                
+                
+              </div>
+            </div>
+          
+            <div class="frame-card">
+              <img src="scene_05_settled_f0219.jpg" alt="scene_05_settled" onclick="window.open('scene_05_settled_f0219.jpg', '_blank')">
+              <div class="frame-meta">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                  <span class="tag">settled</span>
+                  <span style="color: var(--text-muted);">Frame 219 (00:07.30)</span>
+                </div>
+                <div class="obj"><strong>🎯 Target:</strong> Subject focus</div>
+                
+                
+              </div>
+            </div>
+          
+            <div class="frame-card">
+              <img src="scene_05_exit_f0223.jpg" alt="scene_05_exit" onclick="window.open('scene_05_exit_f0223.jpg', '_blank')">
+              <div class="frame-meta">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                  <span class="tag">exit</span>
+                  <span style="color: var(--text-muted);">Frame 223 (00:07.43)</span>
+                </div>
+                <div class="obj"><strong>🎯 Target:</strong> Subject focus</div>
+                
+                
+              </div>
+            </div>
+          
+        </div>
+      </section>
+      
+      <section class="scene-block">
+        <div class="scene-header">
+          <span>Kalaकृति Brand Payoff & URL (scene_06)</span>
+          <span style="font-size: 0.9rem; color: var(--text-muted);">106 frames</span>
+        </div>
+        <div class="grid">
+          
+            <div class="frame-card">
+              <img src="scene_06_entry_f0241.jpg" alt="scene_06_entry" onclick="window.open('scene_06_entry_f0241.jpg', '_blank')">
+              <div class="frame-meta">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                  <span class="tag">entry</span>
+                  <span style="color: var(--text-muted);">Frame 241 (00:08.03)</span>
+                </div>
+                <div class="obj"><strong>🎯 Target:</strong> Subject focus</div>
+                
+                
+              </div>
+            </div>
+          
+            <div class="frame-card">
+              <img src="scene_06_apex_f0278.jpg" alt="scene_06_apex" onclick="window.open('scene_06_apex_f0278.jpg', '_blank')">
+              <div class="frame-meta">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                  <span class="tag">apex</span>
+                  <span style="color: var(--text-muted);">Frame 278 (00:09.27)</span>
+                </div>
+                <div class="obj"><strong>🎯 Target:</strong> Subject focus</div>
+                
+                
+              </div>
+            </div>
+          
+            <div class="frame-card">
+              <img src="scene_06_settled_f0325.jpg" alt="scene_06_settled" onclick="window.open('scene_06_settled_f0325.jpg', '_blank')">
+              <div class="frame-meta">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                  <span class="tag">settled</span>
+                  <span style="color: var(--text-muted);">Frame 325 (00:10.83)</span>
+                </div>
+                <div class="obj"><strong>🎯 Target:</strong> Subject focus</div>
+                
+                
+              </div>
+            </div>
+          
+            <div class="frame-card">
+              <img src="scene_06_exit_f0329.jpg" alt="scene_06_exit" onclick="window.open('scene_06_exit_f0329.jpg', '_blank')">
+              <div class="frame-meta">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                  <span class="tag">exit</span>
+                  <span style="color: var(--text-muted);">Frame 329 (00:10.97)</span>
+                </div>
+                <div class="obj"><strong>🎯 Target:</strong> Subject focus</div>
+                
+                
+              </div>
+            </div>
+          
+        </div>
+      </section>
+      
+  </main>
+</body>
+</html>

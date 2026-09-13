@@ -29,7 +29,11 @@ Example:
 const rootDir = process.cwd();
 const projectDir = path.join(rootDir, 'projects', projectSlug);
 const timelinePath = path.join(projectDir, '03_Planner', 'timeline.yaml');
-const analysisPath = path.join(projectDir, '02_Analyzer', 'audio', 'analysis.yaml');
+const analysisCandidates = [
+  path.join(projectDir, '00_Audio', 'analysis.yaml'),
+  path.join(projectDir, '02_Analyzer', 'audio', 'analysis.yaml'),
+];
+const analysisPath = analysisCandidates.find(p => fs.existsSync(p)) || analysisCandidates[0];
 const audioMapPath = path.join(projectDir, '03_Planner', 'audio_map.yaml');
 
 console.log(`\n========================================`);
@@ -42,7 +46,7 @@ if (!fs.existsSync(timelinePath)) {
 }
 
 if (!fs.existsSync(analysisPath)) {
-  console.error(`❌ Audio analysis not found: ${analysisPath}`);
+  console.error(`❌ Audio analysis not found in 00_Audio/ or 02_Analyzer/audio/.`);
   console.error(`   Run step 2 first: bun run audio:analyze ${projectSlug}`);
   process.exit(1);
 }

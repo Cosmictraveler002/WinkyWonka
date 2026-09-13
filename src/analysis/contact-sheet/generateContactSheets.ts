@@ -27,7 +27,7 @@ export async function generateContactSheets(options: ContactSheetOptions): Promi
   if (!compositionId) {
     if (projectSlug === 'demo-showcase') compositionId = 'DemoShowcase';
     else if (projectSlug === 'dzinr') compositionId = 'DzinrShowcase';
-    else compositionId = projectSlug;
+    else compositionId = projectSlug.replace(/_/g, '-');
   }
 
   const rootDir = process.cwd();
@@ -46,9 +46,12 @@ export async function generateContactSheets(options: ContactSheetOptions): Promi
     (timeline.scenes ? timeline.scenes.reduce((acc: number, s: any) => acc + (s.duration_in_frames || 0), 0) : 0);
   timeline.total_duration_in_frames = totalFrames;
 
+  const analysisDir = fs.existsSync(path.join(projectDir, '02_Deconstruction'))
+    ? path.join(projectDir, '02_Deconstruction')
+    : path.join(projectDir, '02_Analyzer');
   const outputDir =
-    options.outputDir || path.join(projectDir, '02_Analyzer', `contact_sheets_${mode}`);
-  const tempFramesDir = path.join(outputDir, '.temp_frames');
+    options.outputDir || path.join(analysisDir, `contact_sheets_${mode}`);
+  const tempFramesDir = path.join(outputDir, 'temp_frames');
 
   fs.mkdirSync(outputDir, { recursive: true });
   fs.mkdirSync(tempFramesDir, { recursive: true });
@@ -64,20 +67,52 @@ export async function generateContactSheets(options: ContactSheetOptions): Promi
 
   // 2. Extract/render raw snapshot frames
   console.log(`⚡ Rendering raw snapshots...`);
-  for (let i = 0; i < sampledFrames.length; i++) {
-    const meta = sampledFrames[i];
+  const missingFrames = sampledFrames.filter(meta => {
     const tempFile = path.join(tempFramesDir, `frame_${meta.frame.toString().padStart(4, '0')}.jpg`);
     meta.filePath = tempFile;
+    return !fs.existsSync(tempFile);
+  });
 
-    if (!fs.existsSync(tempFile)) {
-      if (sourceType === 'video' && sourcePath && fs.existsSync(sourcePath)) {
-        // Extract via ffmpeg from rendered video
-        const cmd = `ffmpeg -y -ss ${meta.time} -i "${sourcePath}" -vframes 1 -q:v 2 "${tempFile}"`;
+  if (missingFrames.length > 0) {
+    if (sourceType === 'video' && sourcePath && fs.existsSync(sourcePath)) {
+      for (const meta of missingFrames) {
+        const cmd = `ffmpeg -y -ss ${meta.time} -i "${sourcePath}" -vframes 1 -q:v 2 "${meta.filePath}"`;
+        try { execSync(cmd, { stdio: 'pipe' }); } catch {}
+      }
+    } else {
+      // Fast single-pass batch sequence render
+      const frameList = Array.from(new Set(missingFrames.map(m => m.frame))).sort((a, b) => a - b).join(',');
+      const batchSeqDir = path.resolve(tempFramesDir, 'seq_batch_frames').replace(/\\/g, '/');
+      fs.mkdirSync(batchSeqDir, { recursive: true });
+
+      try {
+        console.log(`   ⚡ Fast batch rendering ${missingFrames.length} frames via single-pass sequence...`);
+        const cmd = `bun run remotion render src/index.ts ${compositionId} "${batchSeqDir}" --sequence --image-format=jpeg --frames=${frameList} --props="{\\"disableAudio\\":true}" --gl=angle --muted --overwrite`;
         execSync(cmd, { stdio: 'pipe' });
-      } else {
-        // Render directly from Remotion composition
-        const cmd = `bun run remotion still src/index.ts ${compositionId} "${tempFile}" --frame=${meta.frame}`;
-        execSync(cmd, { stdio: 'pipe' });
+
+        const batchFiles = fs.readdirSync(batchSeqDir);
+        for (const file of batchFiles) {
+          const match = file.match(/element-(\d+)\.(jpeg|jpg)/i);
+          if (match) {
+            const fNum = parseInt(match[1], 10);
+            const dest = path.join(tempFramesDir, `frame_${fNum.toString().padStart(4, '0')}.jpg`);
+            fs.copyFileSync(path.join(batchSeqDir, file), dest);
+          }
+        }
+      } catch (err: any) {
+        console.warn(`   ⚠️ Batch render warning: ${err.message}. Falling back to sequential capture.`);
+      } finally {
+        try { fs.rmSync(batchSeqDir, { recursive: true, force: true }); } catch {}
+      }
+
+      // Fallback for any frames that were not rendered by batch
+      for (const meta of missingFrames) {
+        if (!fs.existsSync(meta.filePath!)) {
+          try {
+            const cmd = `bun run remotion still src/index.ts ${compositionId} "${meta.filePath}" --frame=${meta.frame} --gl=angle`;
+            execSync(cmd, { stdio: 'pipe' });
+          } catch {}
+        }
       }
     }
   }

@@ -1,0 +1,19 @@
+script_intake:
+  project: "dzinr_motion"
+  format: "brand_film"
+  audience: "Tech founders, product teams, creative directors seeking premium brand & motion identity"
+  emotional_goal: "excitement"
+  primary_cta: "Partner with DZ!NR for high-impact brand systems"
+  core_message: "DZ!NR crafts precision motion, identity, and digital experiences."
+  duration_target_seconds: 11.03
+  brand:
+    logo_path: "public/projects/dzinr/dzinr_logo.png"
+    tagline: "Precision Motion & Brand Design"
+    tone_of_voice: "Confident, crisp, modern, authoritative without jargon"
+    mandatory_colors:
+      - "#ffffff"
+      - "#000000"
+      - "#ea580c"
+  restrictions:
+    - "No generic AI gradients, glowing bubbles, or corporate clichés"
+    - "No cluttered paragraphs — text must be sharp and impactful"

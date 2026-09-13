@@ -1,0 +1,196 @@
+project: dzinr_motion
+overallProgressPercent: 90
+activePhaseId: phase_8
+activePhaseName: Studio Preview & Approval (Human Gate)
+completedPhasesCount: 12
+totalPhasesCount: 14
+humanGates:
+  total: 2
+  passed: 1
+  pending: 1
+lastUpdated: 2026-09-13T07:15:48.213Z
+phases:
+  - id: phase_1a
+    phaseNumber: 1A
+    name: Temporal Deconstruction
+    category: Foundation
+    description: Deconstruct reference video duration, cuts, pacing, and macro
+      rhythm template
+    weight: 5
+    isHumanGate: false
+    artifacts:
+      - 02_Deconstruction/TEMPORAL_ANALYSIS.yaml
+    status: completed
+    updatedAt: 2026-09-13T07:15:48.201Z
+    notes: Temporal analysis and rhythm template confirmed.
+  - id: phase_1b
+    phaseNumber: 1B
+    name: Visual Deconstruction
+    category: Foundation
+    description: Extract entry, apex, and exit snapshots; dissect animation
+      techniques and palette
+    weight: 5
+    isHumanGate: false
+    artifacts:
+      - 02_Deconstruction/DECONSTRUCTION.yaml
+      - 02_Deconstruction/VISUAL_ANALYSIS.yaml
+    status: completed
+    updatedAt: 2026-09-13T07:15:48.202Z
+    notes: Visual scene snapshots and animation mechanics cataloged.
+  - id: phase_1c
+    phaseNumber: 1C
+    name: Audio Foundation & Beat Skeleton
+    category: Foundation
+    description: Soundtrack selection, spectral/transient beat grid, cut windows,
+      and temporal skeleton
+    weight: 10
+    isHumanGate: false
+    artifacts:
+      - 00_Audio/temporal_skeleton.yaml
+      - 00_Audio/soundtrack.wav
+    status: completed
+    updatedAt: 2026-09-13T07:15:48.202Z
+    notes: Mastered soundtrack and beat skeleton grid active.
+  - id: phase_2a
+    phaseNumber: "2.0"
+    name: Creative Intake & Script
+    category: Creative
+    description: Audience and brand intake questionnaire, audio-locked script with
+      exact cut windows
+    weight: 10
+    isHumanGate: false
+    artifacts:
+      - 03_Planner/SCRIPT_INTAKE.yaml
+      - 03_Planner/SCRIPT.md
+    status: completed
+    updatedAt: 2026-09-13T07:15:48.202Z
+    notes: Audio-locked script authored.
+  - id: phase_2b
+    phaseNumber: "2.5"
+    name: Script & Rhythm Audit
+    category: Creative
+    description: Audit shot non-uniformity, cognitive load, hook validity, and
+      anti-AI tropes
+    weight: 5
+    isHumanGate: false
+    artifacts:
+      - 03_Planner/SCRIPT_AUDIT.yaml
+    status: completed
+    updatedAt: 2026-09-13T07:15:48.202Z
+    notes: Script and rhythm variance audited against creative rulebook.
+  - id: phase_3a
+    phaseNumber: "3.0"
+    name: Asset & Tech Stack Planning
+    category: Planning
+    description: Map Remotion primitives, shaders, 3D dependencies, and asset requirements
+    weight: 5
+    isHumanGate: false
+    artifacts:
+      - 03_Planner/STORYBOARD_ASSET_REQUIREMENTS.yaml
+      - 03_Planner/TECH_STACK_MAP.yaml
+    status: completed
+    updatedAt: 2026-09-13T07:15:48.202Z
+    notes: Asset requirements and tech stack mapped.
+  - id: phase_3b
+    phaseNumber: "3.5"
+    name: Interactive Asset Co-Design
+    category: Planning
+    description: Palette confirmation, hero visual co-design, and asset registration
+      manifest
+    weight: 5
+    isHumanGate: false
+    artifacts:
+      - 04_Assets/ASSET_MANIFEST.yaml
+    status: completed
+    updatedAt: 2026-09-13T07:15:48.202Z
+    notes: Brand assets cataloged in asset manifest.
+  - id: phase_3c
+    phaseNumber: "3.7"
+    name: Storyboard Lock (Human Gate)
+    category: Planning
+    description: Mandatory human approval of locked storyboard and shot cards before
+      code build
+    weight: 10
+    isHumanGate: true
+    artifacts:
+      - 03_Planner/STORYBOARD.yaml
+    status: completed
+    updatedAt: 2026-09-13T07:15:48.208Z
+    notes: Approved by "user" on 2026-09-13T11:26:00.000Z.
+  - id: phase_4
+    phaseNumber: "4.0"
+    name: Declarative Remotion Code Build
+    category: Production
+    description: Remotion React scene components, physics springs, transitions, and
+      root composition
+    weight: 15
+    isHumanGate: false
+    artifacts:
+      - 05_Code/Composition.tsx
+    status: completed
+    updatedAt: 2026-09-13T07:15:48.208Z
+    notes: Declarative Remotion React scenes and TransitionSeries built.
+  - id: phase_5
+    phaseNumber: "5.0"
+    name: AI Contact Sheets Generation
+    category: Verification
+    description: High-speed batch sequence extraction of storyboard and motion
+      vision contact sheets
+    weight: 5
+    isHumanGate: false
+    artifacts:
+      - 02_Deconstruction/contact_sheets_storyboard/contact-sheet-manifest.json
+      - 02_Deconstruction/contact_sheets_motion/contact-sheet-manifest.json
+    status: completed
+    updatedAt: 2026-09-13T07:15:48.208Z
+    notes: Storyboard and motion contact sheets generated via high-speed batch
+      sequence.
+  - id: phase_6
+    phaseNumber: "6.0"
+    name: Visual Refinement Loop
+    category: Verification
+    description: Draft render, strategic keyframe capture (entry/apex/settle/exit),
+      visual convergence
+    weight: 10
+    isHumanGate: false
+    artifacts:
+      - 02_Deconstruction/REFINEMENT_STATE.yaml
+    status: completed
+    updatedAt: 2026-09-13T07:15:48.211Z
+    notes: "Refinement converged at iteration 8 (Score: 98/100)."
+  - id: phase_7
+    phaseNumber: "7.0"
+    name: Critic Agent Vision Audit
+    category: Verification
+    description: Multi-sheet vision critique, rhythm contrast check, AI-slop
+      inspection (Score >= 90)
+    weight: 5
+    isHumanGate: false
+    artifacts:
+      - 02_Deconstruction/critique.json
+    status: completed
+    updatedAt: 2026-09-13T07:15:48.212Z
+    notes: Critic Agent vision audit passed with score 100/100.
+  - id: phase_8
+    phaseNumber: "8.0"
+    name: Studio Preview & Approval (Human Gate)
+    category: Delivery
+    description: Interactive Remotion Studio inspection (localhost:3000) and
+      explicit human sign-off
+    weight: 5
+    isHumanGate: true
+    artifacts: []
+    status: blocked_human_gate
+    updatedAt: 2026-09-13T07:15:48.213Z
+    notes: Ready for user studio review (http://localhost:3000) and sign-off.
+  - id: phase_9
+    phaseNumber: "9.0"
+    name: Production Video Export
+    category: Delivery
+    description: Final full-resolution master MP4 export with audio lock
+    weight: 5
+    isHumanGate: false
+    artifacts: []
+    status: pending
+    updatedAt: 2026-09-13T07:15:48.213Z
+    notes: ""

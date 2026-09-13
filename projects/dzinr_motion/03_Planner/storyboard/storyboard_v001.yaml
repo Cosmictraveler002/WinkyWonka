@@ -1,0 +1,381 @@
+project: dzinr_motion
+version: v001
+updated_at: 2026-09-13T04:47:14.067Z
+fps: 30
+total_duration_seconds: 7.33
+total_duration_frames: 220
+creative_direction:
+  core_idea: High-impact authored visual narrative balancing kinetic typography,
+    deep atmospheric lighting, and high-fidelity product reveals built around
+    Template B (Burst -> Hold -> Burst -> Payoff).
+  visual_language: Grounded editorial dark mode aesthetic, avoiding generic
+    AI-slop tropes. High contrast between crisp foreground typographic marks and
+    subtle volumetric particle fields.
+  camera_language: Deliberate, cinematic focal shifts with subtle continuous
+    drift. Fast snaps on rhythmic accents, stable holds on key typography and
+    payoff.
+  editing_language: Non-uniform temporal cutting following Template B (Burst ->
+    Hold -> Burst -> Payoff). Opening burst (2.5s) -> fast technical escalation
+    (1.8s) -> extended payoff hold (3.0s). Cuts are motivated by typographic
+    reveals rather than arbitrary beats.
+  performance_language: "Zero mechanical float. Elements settle with organic
+    spring physics (damping: 15, stiffness: 220), establishing weight and
+    tactile authority."
+  typography_language: Dominant uppercase display headings with generous
+    letter-spacing, accompanied by muted geometric mono captions. Clear
+    typographical hierarchy.
+  ending_strategy: Decisive focal settlement on brand call-to-action with glowing
+    accent pulse, holding until visual dissolve.
+  major_creative_decisions:
+    - id: D001
+      topic: Hero Subject Presentation in Scene 02
+      proposed_direction: Floating 3D glass card with subtle particle orbit and kinetic text reveal
+      alternatives:
+        - Direct full-screen product hero shot with dynamic camera push-in
+        - Split-screen typographic showcase comparing features side-by-side
+      requires_human_choice: true
+      status: pending
+    - id: D002
+      topic: Transition from Scene 01 to Scene 02
+      proposed_direction: Rapid slide left with motion blur to maintain kinetic acceleration
+      alternatives:
+        - Hard cut on audio transient for maximum contrast
+        - Dimensional zoom-through camera match cut
+      requires_human_choice: false
+      status: approved
+    - id: D003
+      topic: Closing Call-to-Action Payoff
+      proposed_direction: GlowBadge with pulsing cyan border and animated button settlement
+      alternatives:
+        - Minimalist centered monochrome logo reveal without button UI
+        - Fast kinetic wordmark slam followed by URL lockup
+      requires_human_choice: true
+      status: pending
+scenes:
+  - id: scene_01
+    title: Opening Hook
+    purpose: Establish hook & tempo
+    total_duration_seconds: 2.5
+    total_duration_frames: 75
+    shots:
+      - id: S01_SH01
+        time:
+          start_seconds: 0
+          end_seconds: 1
+          duration_seconds: 1
+          start_frame: 0
+          end_frame: 30
+        script:
+          dialogue: null
+          line_ids:
+            - L01
+        purpose: hook
+        viewer_should_notice: Crisp glowing subtitle badge popping into view against
+          dark textured backdrop
+        viewer_should_understand: A premium, authored video experience is launching
+          without generic startup fluff
+        viewer_should_feel: Immediate intrigue and focused anticipation
+        attention_target: Center-screen glowing badge pop
+        secondary_target: null
+        visual:
+          description: Dark atmospheric gradient background with ambient noise texture.
+            Subtitle badge zooms in with spring bounce.
+          focal_point: Center screen badge pop
+          action: Glow badge scales from 0.8 to 1.0 with subtle glow pulse
+        framing:
+          shot_size: medium
+          angle: eye_level
+          composition: Centered hero with heavy negative space above and below
+        camera:
+          movement: slow_push_in
+          lens: 35mm anamorphic
+        motion:
+          entrance: Scale spring 0.8 -> 1.0 with organic overshoot
+          transformation: Subtle cyan radial glow expansion
+          exit: Holds focus as headline prepares to enter
+        subject: Atmospheric Brand Badge
+        action: Glow badge scales from 0.8 to 1.0 with subtle glow pulse
+        performance: Deadpan stillness before kinetic snap
+        text:
+          content: REMOTION ORCHESTRATION
+          hierarchy: badge
+          animation: scale_spring
+        audio:
+          dialogue: false
+          music_beat: Opens on crisp snare tap
+          sfx: subtle_whoosh
+        transition:
+          type: none
+        rhythm:
+          event: pulse
+          notes: Snappy initial entrance without lagging
+          rhythm_role: Initial attention hook pulse
+        complexity: low
+        attention_load: medium
+        creative_rationale: "Rule 5.8 Text Hook: Instantly establishes context without
+          wasteful logo screens or generic branding"
+        previous_shot_relationship: Opening frame of production
+        next_shot_relationship: Prepares viewer for dominant kinetic headline reveal
+        asset_dependencies: []
+      - id: S01_SH02
+        time:
+          start_seconds: 1
+          end_seconds: 2.5
+          duration_seconds: 1.5
+          start_frame: 30
+          end_frame: 75
+        script:
+          dialogue: null
+          line_ids:
+            - L02
+        purpose: establish
+        viewer_should_notice: Precision kinetic typography slamming into frame character-by-character
+        viewer_should_understand: The core value proposition and high technical craftsmanship
+        viewer_should_feel: Arousal, energy, and aesthetic confidence
+        attention_target: Dominant kinetic headline
+        secondary_target: Volumetric background gradient
+        visual:
+          description: Dominant kinetic headline reveals character-by-character with
+            snappy spring physics. Camera pushes subtly.
+          focal_point: Primary typography anchor
+          action: Headline ascends from below with slight rotation snap
+        framing:
+          shot_size: medium_close_up
+          angle: eye_level
+          composition: Horizontally centered, eye-level anchor
+        camera:
+          movement: slow_push_in
+          lens: 50mm prime
+        motion:
+          entrance: Character-by-character spring rise with rotational dampening
+          transformation: Continuous subtle drift
+          exit: Rapid slide left with directional motion blur
+        subject: Dominant Kinetic Headline
+        action: Headline ascends from below with slight rotation snap
+        performance: null
+        text:
+          content: PRECISION MOTION
+          hierarchy: headline
+          animation: kinetic_spring
+        audio:
+          dialogue: false
+          music_beat: Bass drop arrives at headline apex
+          sfx: sub_drop
+        transition:
+          type: slide_left
+          duration_frames: 15
+          reason: Accelerates momentum into Scene 02
+        rhythm:
+          event: impact
+          notes: Apex of Scene 01 visual energy
+          rhythm_role: Kinetic acceleration and headline delivery
+        complexity: medium
+        attention_load: high
+        creative_rationale: Rule 20 Fast Editing creates arousal; Rule 24 Typographic
+          Motion gives physical weight to the statement
+        previous_shot_relationship: Direct perceptual continuation from badge introduction
+        next_shot_relationship: Kinetic momentum bridges the cut into 3D particle emergence
+        asset_dependencies: []
+  - id: scene_02
+    title: Feature Showcase
+    purpose: Escalate feature showcase
+    total_duration_seconds: 1.83
+    total_duration_frames: 55
+    shots:
+      - id: S02_SH01
+        time:
+          start_seconds: 2.5
+          end_seconds: 3.42
+          duration_seconds: 0.92
+          start_frame: 75
+          end_frame: 103
+        script:
+          dialogue: null
+          line_ids:
+            - L03
+        purpose: escalate
+        viewer_should_notice: Swirling volumetric particles orbiting a frosted
+          dimensional card emerging from depth
+        viewer_should_understand: Dimensional depth and advanced motion fidelity
+        viewer_should_feel: Sensory escalation and technical wonder
+        attention_target: Dimensional glass card emerging from center depth
+        secondary_target: Orbital particle field
+        visual:
+          description: Field of 3D starfield particles drifts forward. GlassCard emerges
+            with frosted blur protecting legibility.
+          focal_point: Card emergence from dimensional depth
+          action: Card slides into frame, particles swirl in three dimensions
+        framing:
+          shot_size: medium
+          angle: low
+          composition: Centered card with dynamic floating particles around perimeter
+        camera:
+          movement: handheld_drift
+          lens: 24mm wide angle
+        motion:
+          entrance: Depth push from z:-300 to z:0 with frosted refraction
+          transformation: Volumetric particle orbit around card perimeter
+          exit: Stabilizes card orientation for typographic reveal
+        subject: Dimensional Glass Card & Particles
+        action: Card slides into frame, particles swirl in three dimensions
+        performance: null
+        text: null
+        audio:
+          dialogue: false
+          music_beat: Fast hi-hat rhythmic pattern builds tension
+          sfx: ambient_particles
+        transition:
+          type: none
+        rhythm:
+          event: accelerate
+          notes: Shortest scene in timeline (1.8s) for maximum pacing contrast
+          rhythm_role: Sensory burst and visual complexity wave peak
+        complexity: high
+        attention_load: high
+        creative_rationale: "Rule 38 Complexity Wave: High visual stimulation localized
+          temporarily before returning to simplicity"
+        previous_shot_relationship: Match cut on motion continuity from Scene 01 slide
+        next_shot_relationship: Card motion settles to provide cognitive reading window
+        asset_dependencies:
+          - asset_product_01
+      - id: S02_SH02
+        time:
+          start_seconds: 3.42
+          end_seconds: 4.33
+          duration_seconds: 0.92
+          start_frame: 103
+          end_frame: 130
+        script:
+          dialogue: null
+          line_ids:
+            - L04
+        purpose: demonstrate
+        viewer_should_notice: Secondary caption revealing word-by-word inside the frosted card
+        viewer_should_understand: The product creates motion graphics that amaze the audience
+        viewer_should_feel: Aesthetic satisfaction and narrative clarity
+        attention_target: Word reveal text inside glass card
+        secondary_target: Hero product graphic inside card
+        visual:
+          description: Secondary caption reveals word-by-word inside the card. Particle
+            field slows into orbit.
+          focal_point: Text hierarchy inside glass card
+          action: Staggered word reveal with spring dampening
+        framing:
+          shot_size: close_up
+          angle: eye_level
+          composition: Centered card content
+        camera:
+          movement: static
+          lens: 50mm prime
+        motion:
+          entrance: Staggered word reveal with spring dampening
+          transformation: Particle field slows into calm orbital drift
+          exit: Smooth dimensional cross-fade into closing payoff
+        subject: Word Reveal Typography & Hero Graphic
+        action: Staggered word reveal with spring dampening
+        performance: null
+        text:
+          content: GRAPHICS THAT WOW
+          hierarchy: headline
+          animation: word_reveal
+        audio:
+          dialogue: false
+          music_beat: Snare roll resolves before transition
+        transition:
+          type: cross_fade
+          duration_frames: 15
+          reason: Smooth dimensional dissolve into closing payoff
+        rhythm:
+          event: hold
+          notes: Brief reading window before outro
+          rhythm_role: Comprehension hold following fast acceleration
+        complexity: medium
+        attention_load: medium
+        creative_rationale: "Rule 21 The Hold & Rule 53 One-Breath Rule: Eye settles on
+          headline for immediate reading comprehension"
+        previous_shot_relationship: Stabilization of card motion from emergence
+        next_shot_relationship: Gentle cross-fade into final payoff hold
+        asset_dependencies:
+          - asset_product_01
+  - id: scene_03
+    title: Payoff & CTA
+    purpose: Deliver final payoff & CTA
+    total_duration_seconds: 3
+    total_duration_frames: 90
+    shots:
+      - id: S03_SH01
+        time:
+          start_seconds: 4.33
+          end_seconds: 7.33
+          duration_seconds: 3
+          start_frame: 130
+          end_frame: 220
+        script:
+          dialogue: null
+          line_ids:
+            - L05
+        purpose: payoff
+        viewer_should_notice: Prominent CTA card with continuously pulsing cyan glow
+          button and final headline
+        viewer_should_understand: The video concludes with an actionable next step ready for production
+        viewer_should_feel: Decisive resolution, confidence, and desire to take action
+        attention_target: Closing Call-to-Action button and brand payoff lockup
+        secondary_target: null
+        visual:
+          description: Deep navy/cyan gradient background. Prominent CTA card settles with
+            pulsing button accent and final headline.
+          focal_point: Action button and brand payoff lockup
+          action: Button scales up with bouncy spring; subtle cyan glow ring expands
+            continuously
+        framing:
+          shot_size: medium_close_up
+          angle: eye_level
+          composition: Rule of thirds anchor with dominant center CTA block
+        camera:
+          movement: slow_push_in
+          lens: 50mm prime
+        motion:
+          entrance: Bouncy spring scale-up and upward slide
+          transformation: Continuous radial cyan glow ring expansion
+          exit: Final frame hold until dissolve/loop
+        subject: Closing Call-to-Action Card
+        action: Button scales up with bouncy spring; subtle cyan glow ring expands
+          continuously
+        performance: null
+        text:
+          content: READY FOR PRODUCTION
+          hierarchy: headline
+          animation: fade_slide_up
+        audio:
+          dialogue: false
+          music_beat: Full melodic resolution and sustained chord
+          sfx: payoff_chime
+        transition:
+          type: none
+        rhythm:
+          event: payoff
+          notes: Deliberate 3.0s visual hold for complete brand absorption
+          rhythm_role: Final perceptual hold and brand payoff
+        complexity: low
+        attention_load: low
+        creative_rationale: "Rule 49 & Rule 101 Final Frame: Simple, singular attention
+          target with low complexity ensures brand memory retention"
+        previous_shot_relationship: Cross-fade resolution from feature demonstration
+        next_shot_relationship: Final frame hold until loop/end
+        asset_dependencies: []
+ending:
+  strategy: Hold on interactive CTA card with continuous glow pulse
+  payoff_shot_id: S03_SH01
+asset_requirements:
+  - id: asset_product_01
+    type: product_image
+    name: Hero Showcase Subject
+    priority: 2
+    required: true
+    used_in_shots:
+      - S02_SH01
+      - S02_SH02
+    description: Visual showcase subject displayed within Scene 02 dimensional card
+    visual_role: Primary feature showcase asset with transparent background
+script_notes: []
+human_decisions: []

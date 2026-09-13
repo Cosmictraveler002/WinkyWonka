@@ -34,16 +34,34 @@ Example:
 
 const rootDir = process.cwd();
 const projectDir = path.join(rootDir, 'projects', projectSlug);
-const audioDir = path.join(projectDir, '02_Analyzer', 'audio');
-const wavPath = path.join(audioDir, 'ref_audio.wav');
-const yamlPath = path.join(audioDir, 'analysis.yaml');
+const audioDir00 = path.join(projectDir, '00_Audio');
+const audioDir02 = path.join(projectDir, '02_Analyzer', 'audio');
+
+// Locate WAV input
+const candidateWavs = [
+  path.join(audioDir00, 'soundtrack.wav'),
+  path.join(audioDir00, 'ref_audio.wav'),
+  path.join(audioDir02, 'ref_audio.wav'),
+  path.join(rootDir, 'public', 'projects', projectSlug, 'ref_audio.wav'),
+];
+
+let wavPath: string | null = null;
+for (const c of candidateWavs) {
+  if (fs.existsSync(c)) {
+    wavPath = c;
+    break;
+  }
+}
+
+const primaryAudioDir = fs.existsSync(audioDir00) ? audioDir00 : audioDir02;
+const yamlPath = path.join(primaryAudioDir, 'analysis.yaml');
 
 console.log(`\n========================================`);
 console.log(`🔍 [Step 2/6] ANALYZE AUDIO: "${projectSlug}"`);
 console.log(`========================================\n`);
 
-if (!fs.existsSync(wavPath)) {
-  console.error(`❌ Input audio not found: ${wavPath}`);
+if (!wavPath || !fs.existsSync(wavPath)) {
+  console.error(`❌ Input audio not found in 00_Audio/ or 02_Analyzer/audio/.`);
   console.error(`   Run step 1 first: bun run audio:extract ${projectSlug}`);
   process.exit(1);
 }
@@ -210,6 +228,14 @@ const analysisData = {
 };
 
 fs.writeFileSync(yamlPath, YAML.stringify(analysisData, { indent: 2 }), 'utf8');
+
+// Mirror analysis.yaml if secondary directory exists
+const secondaryAudioDir = primaryAudioDir === audioDir00 ? audioDir02 : audioDir00;
+if (fs.existsSync(secondaryAudioDir)) {
+  try {
+    fs.writeFileSync(path.join(secondaryAudioDir, 'analysis.yaml'), YAML.stringify(analysisData, { indent: 2 }), 'utf8');
+  } catch {}
+}
 
 console.log(`\n✅ Audio Analysis Complete:`);
 console.log(`   Output:        ${path.relative(rootDir, yamlPath)}`);

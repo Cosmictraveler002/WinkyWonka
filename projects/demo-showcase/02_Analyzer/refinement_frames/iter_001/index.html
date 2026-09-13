@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>demo-showcase - Refinement Loop (Iteration 1)</title>
+  <style>
+    :root {
+      --bg: #090d16;
+      --card-bg: rgba(255, 255, 255, 0.04);
+      --border: rgba(255, 255, 255, 0.1);
+      --primary: #38bdf8;
+      --accent: #f43f5e;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      padding: 2.5rem;
+      min-height: 100vh;
+    }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    h1 { font-size: 2rem; font-weight: 800; }
+    .badge {
+      display: inline-block;
+      padding: 0.3rem 0.8rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      background: rgba(56, 189, 248, 0.15);
+      color: var(--primary);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      margin-bottom: 0.5rem;
+    }
+    .video-section {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+    video {
+      width: 100%;
+      max-height: 540px;
+      border-radius: 8px;
+      background: #000;
+    }
+    .scene-block {
+      margin-bottom: 2.5rem;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.5rem;
+    }
+    .scene-header {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      color: var(--primary);
+      display: flex;
+      justify-content: space-between;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.25rem;
+    }
+    .frame-card {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .frame-card img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      display: block;
+      cursor: pointer;
+    }
+    .frame-meta {
+      padding: 1rem;
+      font-size: 0.85rem;
+    }
+    .tag {
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--primary);
+    }
+    .obj {
+      margin-top: 0.5rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+    .obj strong { color: #e2e8f0; }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <span class="badge">Visual Refinement Loop • Iteration 1 of 5</span>
+      <h1>demo-showcase</h1>
+      <div style="color: var(--text-muted); margin-top: 0.4rem;">
+        Total Duration: 220 frames (7.3s) | FPS: 30 | Scale: 0.5x
+      </div>
+    </div>
+  </header>
+
+  
+
+  <main>
+    
+      <section class="scene-block">
+        <div class="scene-header">
+          <span>Kinetic Intro (scene_01)</span>
+          <span style="font-size: 0.9rem; color: var(--text-muted);">75 frames</span>
+        </div>
+        <div class="grid">
+          
+            <div class="frame-card">
+              <img src="scene_01_entry_f0011.jpg" alt="scene_01_entry" onclick="window.open('scene_01_entry_f0011.jpg', '_blank')">
+              <div class="frame-meta">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                  <span class="tag">entry</span>
+                  <span style="color: var(--text-muted);">Frame 11 (00:00.37)</span>
+                </div>
+                <div class="obj"><strong>🎯 Target:</strong> Center-screen glowing badge pop</div>
+                <div class="obj"><strong>👀 Notice:</strong> Crisp glowing subtitle badge popping into view against dark textured backdrop</div>
+                <div class="obj"><strong>💡 Understand:</strong> A premium, authored video experience is launching without generic startup fluff</div>
+              </div>
+            </div>
+          
+            <div class="frame-card">
+              <img src="scene_01_apex_f0038.jpg" alt="scene_01_apex" onclick="window.open('scene_01_apex_f0038.jpg', '_blank')">
+              <div class="frame-meta">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                  <span class="tag">apex</span>
+                  <span style="color: var(--text-muted);">Frame 38 (00:01.27)</span>
+                </div>
+                <div class="obj"><strong>🎯 Target:</strong> Dominant kinetic headline</div>
+                <div class="obj"><strong>👀 Notice:</strong> Precision kinetic typography slamming into frame character-by-character</div>
+                <div class="obj"><strong>💡 Understand:</strong> The core value proposition and high technical craftsmanship</div>
+              </div>
+            </div>
+          
+            <div class="frame-card">
+              <img src="scene_01_settled_f0069.jpg" alt="scene_01_settled" onclick="window.open('scene_01_settled_f0069.jpg', '_blank')">
+              <div class="frame-meta">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                  <span class="tag">settled</span>
+                  <span style="color: var(--text-muted);">Frame 69 (00:02.30)</span>
+                </div>
+                <div class="obj"><strong>🎯 Target:</strong> Dominant kinetic headline</div>
+                <div class="obj"><strong>👀 Notice:</strong> Precision kinetic typography slamming into frame character-by-character</div>
+                <div class="obj"><strong>💡 Understand:</strong> The core value proposition and high technical craftsmanship</div>
+              </div>
+            </div>
+          
+            <div class="frame-card">
+              <img src="scene_01_exit_f0073.jpg" alt="scene_01_exit" onclick="window.open('scene_01_exit_f0073.jpg', '_blank')">
+              <div class="frame-meta">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                  <span class="tag">exit</span>
+                  <span style="color: var(--text-muted);">Frame 73 (00:02.43)</span>
+                </div>
+                <div class="obj"><strong>🎯 Target:</strong> Dominant kinetic headline</div>
+                <div class="obj"><strong>👀 Notice:</strong> Precision kinetic typography slamming into frame character-by-character</div>
+                <div class="obj"><strong>💡 Understand:</strong> The core value proposition and high technical craftsmanship</div>
+              </div>
+            </div>
+          
+        </div>
+      </section>
+      
+      <section class="scene-block">
+        <div class="scene-header">
+          <span>3D Particle Showcase (scene_02)</span>
+          <span style="font-size: 0.9rem; color: var(--text-muted);">55 frames</span>
+        </div>
+        <div class="grid">
+          
+            <div class="frame-card">
+              <img src="scene_02_entry_f0083.jpg" alt="scene_02_entry" onclick="window.open('scene_02_entry_f0083.jpg', '_blank')">
+              <div class="frame-meta">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                  <span class="tag">entry</span>
+                  <span style="color: var(--text-muted);">Frame 83 (00:02.77)</span>
+                </div>
+                <div class="obj"><strong>🎯 Target:</strong> Dimensional glass card emerging from center depth</div>
+                <div class="obj"><strong>👀 Notice:</strong> Swirling volumetric particles orbiting a frosted dimensional card emerging from depth</div>
+                <div class="obj"><strong>💡 Understand:</strong> Dimensional depth and advanced motion fidelity</div>
+              </div>
+            </div>
+          
+            <div class="frame-card">
+              <img src="scene_02_apex_f0103.jpg" alt="scene_02_apex" onclick="window.open('scene_02_apex_f0103.jpg', '_blank')">
+              <div class="frame-meta">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                  <span class="tag">apex</span>
+                  <span style="color: var(--text-muted);">Frame 103 (00:03.43)</span>
+                </div>
+                <div class="obj"><strong>🎯 Target:</strong> Word reveal text inside glass card</div>
+                <div class="obj"><strong>👀 Notice:</strong> Secondary caption revealing word-by-word inside the frosted card</div>
+                <div class="obj"><strong>💡 Understand:</strong> The product creates motion graphics that amaze the audience</div>
+              </div>
+            </div>
+          
+            <div class="frame-card">
+              <img src="scene_02_settled_f0124.jpg" alt="scene_02_settled" onclick="window.open('scene_02_settled_f0124.jpg', '_blank')">
+              <div class="frame-meta">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                  <span class="tag">settled</span>
+                  <span style="color: var(--text-muted);">Frame 124 (00:04.13)</span>
+                </div>
+                <div class="obj"><strong>🎯 Target:</strong> Word reveal text inside glass card</div>
+                <div class="obj"><strong>👀 Notice:</strong> Secondary caption revealing word-by-word inside the frosted card</div>
+                <div class="obj"><strong>💡 Understand:</strong> The product creates motion graphics that amaze the audience</div>
+              </div>
+            </div>
+          
+            <div class="frame-card">
+              <img src="scene_02_exit_f0128.jpg" alt="scene_02_exit" onclick="window.open('scene_02_exit_f0128.jpg', '_blank')">
+              <div class="frame-meta">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                  <span class="tag">exit</span>
+                  <span style="color: var(--text-muted);">Frame 128 (00:04.27)</span>
+                </div>
+                <div class="obj"><strong>🎯 Target:</strong> Word reveal text inside glass card</div>
+                <div class="obj"><strong>👀 Notice:</strong> Secondary caption revealing word-by-word inside the frosted card</div>
+                <div class="obj"><strong>💡 Understand:</strong> The product creates motion graphics that amaze the audience</div>
+              </div>
+            </div>
+          
+        </div>
+      </section>
+      
+      <section class="scene-block">
+        <div class="scene-header">
+          <span>Production Ready Outro (scene_03)</span>
+          <span style="font-size: 0.9rem; color: var(--text-muted);">90 frames</span>
+        </div>
+        <div class="grid">
+          
+            <div class="frame-card">
+              <img src="scene_03_entry_f0144.jpg" alt="scene_03_entry" onclick="window.open('scene_03_entry_f0144.jpg', '_blank')">
+              <div class="frame-meta">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                  <span class="tag">entry</span>
+                  <span style="color: var(--text-muted);">Frame 144 (00:04.80)</span>
+                </div>
+                <div class="obj"><strong>🎯 Target:</strong> Closing Call-to-Action button and brand payoff lockup</div>
+                <div class="obj"><strong>👀 Notice:</strong> Prominent CTA card with continuously pulsing cyan glow button and final headline</div>
+                <div class="obj"><strong>💡 Understand:</strong> The video concludes with an actionable next step ready for production</div>
+              </div>
+            </div>
+          
+            <div class="frame-card">
+              <img src="scene_03_apex_f0175.jpg" alt="scene_03_apex" onclick="window.open('scene_03_apex_f0175.jpg', '_blank')">
+              <div class="frame-meta">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                  <span class="tag">apex</span>
+                  <span style="color: var(--text-muted);">Frame 175 (00:05.83)</span>
+                </div>
+                <div class="obj"><strong>🎯 Target:</strong> Closing Call-to-Action button and brand payoff lockup</div>
+                <div class="obj"><strong>👀 Notice:</strong> Prominent CTA card with continuously pulsing cyan glow button and final headline</div>
+                <div class="obj"><strong>💡 Understand:</strong> The video concludes with an actionable next step ready for production</div>
+              </div>
+            </div>
+          
+            <div class="frame-card">
+              <img src="scene_03_settled_f0214.jpg" alt="scene_03_settled" onclick="window.open('scene_03_settled_f0214.jpg', '_blank')">
+              <div class="frame-meta">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                  <span class="tag">settled</span>
+                  <span style="color: var(--text-muted);">Frame 214 (00:07.13)</span>
+                </div>
+                <div class="obj"><strong>🎯 Target:</strong> Closing Call-to-Action button and brand payoff lockup</div>
+                <div class="obj"><strong>👀 Notice:</strong> Prominent CTA card with continuously pulsing cyan glow button and final headline</div>
+                <div class="obj"><strong>💡 Understand:</strong> The video concludes with an actionable next step ready for production</div>
+              </div>
+            </div>
+          
+            <div class="frame-card">
+              <img src="scene_03_exit_f0218.jpg" alt="scene_03_exit" onclick="window.open('scene_03_exit_f0218.jpg', '_blank')">
+              <div class="frame-meta">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                  <span class="tag">exit</span>
+                  <span style="color: var(--text-muted);">Frame 218 (00:07.27)</span>
+                </div>
+                <div class="obj"><strong>🎯 Target:</strong> Closing Call-to-Action button and brand payoff lockup</div>
+                <div class="obj"><strong>👀 Notice:</strong> Prominent CTA card with continuously pulsing cyan glow button and final headline</div>
+                <div class="obj"><strong>💡 Understand:</strong> The video concludes with an actionable next step ready for production</div>
+              </div>
+            </div>
+          
+        </div>
+      </section>
+      
+  </main>
+</body>
+</html>

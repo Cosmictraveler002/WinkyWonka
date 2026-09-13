@@ -1,0 +1,45 @@
+tech_stack_map:
+  project: "dzinr_motion"
+  scenes:
+    - id: "scene_01"
+      remotion_primitives: ["Headline", "Caption", "Zoom"]
+      procedural_graphics: ["ParticleField", "GeometricBurstSVG", "IsometricDeviceFrame"]
+      requires_3d: false
+      requires_shaders: false
+      transitions_out: "zoom_punch"
+      
+    - id: "scene_02"
+      remotion_primitives: ["Headline", "Caption"]
+      procedural_graphics: ["DiagonalChevronSplit", "RepeatingOutlineTypography"]
+      requires_3d: false
+      requires_shaders: false
+      transitions_out: "hard_cut"
+      
+    - id: "scene_03"
+      remotion_primitives: ["Headline", "WordReveal"]
+      procedural_graphics: ["ArchitecturalWireframeLetters"]
+      requires_3d: false
+      requires_shaders: false
+      transitions_out: "hard_cut"
+      
+    - id: "scene_04"
+      remotion_primitives: ["Headline", "Caption"]
+      procedural_graphics: ["RotatingRhombusWireframe"]
+      requires_3d: false
+      requires_shaders: false
+      transitions_out: "tonal_inversion"
+      
+    - id: "scene_05"
+      remotion_primitives: ["Headline", "Caption", "Zoom"]
+      procedural_graphics: ["RoundedPortraitScreen", "OrangeAccentArcs", "CircularStroke"]
+      requires_3d: false
+      requires_shaders: false
+      external_media: ["creator_portrait"]
+      transitions_out: "wipe_left"
+      
+    - id: "scene_06"
+      remotion_primitives: ["Headline", "Caption", "CTA", "FilmGrain"]
+      procedural_graphics: ["ExclamationGlowPulse", "AmbientGridParticles"]
+      requires_3d: false
+      requires_shaders: false
+      transitions_out: "none"

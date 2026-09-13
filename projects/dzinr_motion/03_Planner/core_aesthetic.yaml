@@ -1,0 +1,42 @@
+project: "dzinr_motion"
+brand_name: "kalaकृति"
+website_url: "kalakritico.in"
+aesthetic:
+  style: "modern-indic-brutalist-engineering"
+  concept: "Stark, brutalist creative engineering: clinical white canvas inverting to obsidian black with electric vermilion vectors, terminal-style syntax, and mathematical precision"
+  colors:
+    canvas_light: "#FFFFFF"
+    canvas_dark: "#0A0A0A"
+    surface_dark: "#121212"
+    accent_vermilion: "#FF3B1D"
+    bracket_orange: "#FF3B1D"
+    accent_orange_deep: "#E02E10"
+    text_primary_dark: "#FAF8F5"
+    text_primary_light: "#0A0A0A"
+    text_muted: "#737373"
+    wireframe_stroke: "#27272A"
+  typography:
+    display: "Anton, Impact, sans-serif"
+    mono: "Space Mono, monospace"
+    body: "Inter, sans-serif"
+    weights:
+      display: 900
+      subheading: 700
+      body: 400
+  syntax_motifs:
+    bracket_delimiters: "( )"
+    marquee_separator: "•"
+    terminal_watermark: "[ SYS_INIT // 01 ]"
+  springs:
+    snappy:
+      damping: 14
+      stiffness: 240
+      mass: 0.7
+    smooth:
+      damping: 20
+      stiffness: 160
+      mass: 1.0
+    slam:
+      damping: 16
+      stiffness: 290
+      mass: 0.55

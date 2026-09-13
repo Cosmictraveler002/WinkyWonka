@@ -1,0 +1,81 @@
+project: dzinr_motion
+brand: kalaकृति
+website: kalakritico.in
+version: v002_approved
+updated_at: 2026-09-13T11:26:00.000Z
+human_approval:
+  status: approved
+  approved_by: user
+  approved_at: 2026-09-13T11:26:00.000Z
+  notes: "User approved 6-scene Option A with jump-cut typography and vector logo drop."
+fps: 30
+total_duration_seconds: 11.03
+total_duration_frames: 331
+creative_direction:
+  core_idea: "Stark, brutalist creative engineering for kalaकृति: clinical white canvas inverting to obsidian black with electric vermilion vectors, terminal-style syntax, and mathematical precision."
+  visual_language: "High-contrast editorial graphic design: stark white canvas inverting to obsidian black with electric vermilion vectors (#FF3B1D) and warm ivory (#FAF8F5)."
+  camera_language: "Dynamic zooms on rhythmic downbeats, steady holds on key technical copy, and monumental impact drop on the final SVG logo slam."
+  editing_language: "Non-uniform temporal cutting following Template B (Burst -> Hold -> Burst -> Payoff)."
+  typography_language: "Anton / heavy display display for primary messaging; Space Mono for technical subtext, system metadata, and terminal brackets."
+scenes:
+  - id: scene_01
+    title: "The Kinetic Hook (Creative Engineering)"
+    purpose: hook
+    total_duration_seconds: 1.80
+    total_duration_frames: 54
+    attention_target: "Center screen bracketed headline ( CREATIVE ENGINEERING )"
+    visual_action: "Radial pop of geometric vector particles on clinical white canvas; subtle terminal watermark [ SYS_INIT // 01 ] at 14% opacity."
+    text: "( CREATIVE ENGINEERING )"
+    subtext: "DESIGN • CODE • ITERATE"
+
+  - id: scene_02
+    title: "Product Design & Custom Software"
+    purpose: demonstrate
+    total_duration_seconds: 1.40
+    total_duration_frames: 42
+    attention_target: "Bracketed ( PRODUCT DESIGN ) headline block"
+    visual_action: "Diagonal chevron split background; minimalist illustrated laptop viewport with magnetic spring clamp."
+    text: "( PRODUCT DESIGN )"
+    subtext: "CUSTOM SOFTWARE • DIGITAL FLUIDITY"
+
+  - id: scene_03
+    title: "Logo Design & Brand Identities"
+    purpose: escalate
+    total_duration_seconds: 1.20
+    total_duration_frames: 36
+    attention_target: "Tracked ( LOGO DESIGN ) headline"
+    visual_action: "Massive architectural wireframe letter silhouettes expanding in background; kinetic tracking text in foreground."
+    text: "( LOGO DESIGN )"
+    subtext: "BRAND IDENTITIES • MATHEMATICAL ACCURACY"
+
+  - id: scene_04
+    title: "3D Websites & Web Development"
+    purpose: demonstrate
+    total_duration_seconds: 1.40
+    total_duration_frames: 42
+    attention_target: "Rotating 3D wireframe rhombus and ( 3D WEBSITES )"
+    visual_action: "Rotating 3D wireframe rhombus cluster & dimensional canvas planes gliding along architectural coordinate lines."
+    text: "( 3D WEBSITES )"
+    subtext: "WEBSITE DEVELOPMENT • LIVE INTERACTIVE"
+
+  - id: scene_05
+    title: "Engineering Process & Tonal Inversion"
+    purpose: contrast
+    total_duration_seconds: 1.70
+    total_duration_frames: 51
+    attention_target: "Tonal inversion to obsidian dark canvas and DESIGN • CODE • ITERATE"
+    visual_action: "Dramatic flip to obsidian black (#0A0A0A); pulsing vermilion geometric ring and creator device screen."
+    text: "DESIGN • CODE • ITERATE"
+    subtext: "( AT THE INTERSECTION OF AESTHETICS & CODE )"
+
+  - id: scene_06
+    title: "Kalaकृति Brand Payoff & URL"
+    purpose: payoff
+    total_duration_seconds: 3.53
+    total_duration_frames: 106
+    attention_target: "Official Kalaकृति vector SVG mark slam on frame-24 bass drop"
+    secondary_target: "Smooth fade-in of ( kalakritico.in ) terminal URL"
+    visual_action: "Shirorekha divider expands horizontally; Latin Kala springs down + Devanagari कृति springs up; tactile drop slam on frame 24 with vermilion particle burst; ( kalakritico.in ) reveals with terminal cursor tick."
+    text: "kalaकृति"
+    url: "( kalakritico.in )"
+    subtext: "CREATIVE ENGINEERING • DESIGN • CODE • ITERATE"

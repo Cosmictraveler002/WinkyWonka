@@ -119,3 +119,52 @@ Every storyboard, scene, and shot must be authored under these strict operationa
 9. **The Golden Rules (Section 103)**:
    Strict adherence to the 20 Golden Rules of the Creative Rulebook.
 
+---
+
+## Mandatory Directive: UNIVERSAL PHASE & PROGRESS TRACKER
+
+Every video project in the harness MUST maintain an active `PHASE_TRACKER.yaml` and `PROGRESS.md`. All autonomous agents and orchestration scripts must adhere to the 14-phase lifecycle:
+
+### Universal 14-Phase Registry:
+- **Phase 1A**: Temporal Deconstruction (`02_Deconstruction/TEMPORAL_ANALYSIS.yaml`)
+- **Phase 1B**: Visual Deconstruction (`02_Deconstruction/DECONSTRUCTION.yaml`)
+- **Phase 1C**: Audio Foundation & Beat Skeleton (`00_Audio/temporal_skeleton.yaml`)
+- **Phase 2.0**: Creative Intake & Script (`03_Planner/SCRIPT_INTAKE.yaml`, `SCRIPT.md`)
+- **Phase 2.5**: Script & Rhythm Audit (`03_Planner/SCRIPT_AUDIT.yaml`)
+- **Phase 3.0**: Asset & Tech Stack Planning (`03_Planner/STORYBOARD_ASSET_REQUIREMENTS.yaml`)
+- **Phase 3.5**: Interactive Asset Co-Design (`04_Assets/ASSET_MANIFEST.yaml`)
+- **Phase 3.7**: **Storyboard Lock `[HUMAN GATE 1]`** (`03_Planner/STORYBOARD.yaml`)
+- **Phase 4.0**: Declarative Remotion Code Build (`05_Code/Composition.tsx`)
+- **Phase 5.0**: AI Vision Contact Sheets (`02_Deconstruction/contact_sheets_*`)
+- **Phase 6.0**: Visual Refinement Loop (`02_Deconstruction/REFINEMENT_STATE.yaml`)
+- **Phase 7.0**: Critic Agent Vision Audit (`02_Deconstruction/critique.json`)
+- **Phase 8.0**: **Studio Preview & Approval `[HUMAN GATE 2]`** (http://localhost:3000)
+- **Phase 9.0**: Final Production Video Export (`out/<project>.mp4`)
+
+### Phase Tracker CLI Commands:
+- `bun run progress <project-slug>`: Displays real-time ASCII progress bar and status table.
+- `bun run phase:status <project-slug>`: Full breakdown of deliverables and weights.
+- `bun run phase:sync <project-slug>`: Scans directory artifacts and synchronizes state.
+- `bun run phase:approve <project-slug> <phaseNumber>`: Signs off a human approval gate.
+
+---
+
+## Mandatory Directive: HUMAN APPROVAL GATES & HARD PIPELINE HALTS
+
+Autonomous scripts (`bun run pipeline:run <project-slug>`) MUST NEVER bypass human approval gates:
+1. **Gate 1 (Phase 3.7 Storyboard Lock)**: The pipeline MUST HALT with `exit code 1` if `human_approval.status !== 'approved'` in `STORYBOARD.yaml`. No React code build, contact sheets, or refinement runs may proceed without explicit user sign-off.
+2. **Gate 2 (Phase 8.0 Studio Preview)**: After Critic Agent passes (score $\ge 90$), the pipeline MUST HALT and prompt the user to inspect the live timeline at `http://localhost:3000`. Production export (Phase 9.0) is strictly blocked until the user explicitly signs off.
+
+---
+
+## Mandatory Directive: HIGH-SPEED BATCH FRAME EXTRACTION (25×–30× SPEEDUP)
+
+1. **Never run sequential cold-start `remotion still` in a loop**.
+2. Contact sheets and refinement loops MUST utilize single-pass batch sequence extraction:
+   ```bash
+   bun run remotion render src/index.ts <compositionId> "<outputDir>" --sequence --image-format=jpeg --frames=<frameList> --props="{\"disableAudio\":true}" --gl=angle --muted --overwrite
+   ```
+3. **The `--props='{"disableAudio":true}'` parameter is MANDATORY** during frame snapshot extraction to prevent Remotion from probing audio via `ffprobe` into `%TEMP%`, avoiding sandbox permission errors and dropping render times from 4+ minutes down to 10–15 seconds.
+4. **Intermediate directory paths must NEVER have leading dots** (use `temp_frames`, not `.temp_frames`) and must always be normalized to POSIX forward slashes (`/`) to prevent Windows path extension parsing bugs.
+5. **Keep `public/` directory lightweight**. Never place multi-megabyte reference videos in `public/`.
+

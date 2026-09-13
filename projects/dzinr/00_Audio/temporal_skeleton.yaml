@@ -1,0 +1,136 @@
+temporal_skeleton:
+  project: dzinr
+  source: ref_audio.wav
+  bpm: 69
+  time_signature: 4/4
+  total_duration: 11.03
+  energy_curve:
+    - time: 0
+      energy: 0.72
+      phase: intro_buildup
+    - time: 0.8
+      energy: 0.84
+      phase: first_drop
+    - time: 2
+      energy: 1
+      phase: main_drop
+    - time: 3.2
+      energy: 0.85
+      phase: main_drop
+    - time: 4.4
+      energy: 0.8
+      phase: first_drop
+    - time: 5.8
+      energy: 0.74
+      phase: first_drop
+    - time: 7.2
+      energy: 0.51
+      phase: driving_phrase
+    - time: 8.4
+      energy: 0.03
+      phase: breakdown
+  phrase_boundaries:
+    - 0
+    - 0.8
+    - 2
+    - 3.2
+    - 3.48
+    - 4.4
+    - 5.8
+    - 7.2
+    - 8.4
+    - 10.43
+    - 11.03
+  cut_windows:
+    - time: 0.8
+      strength: strongest
+      reason: phrase_boundary + energy_jump
+    - time: 1.65
+      strength: strong
+      reason: "transient_kick (strength: 0.243)"
+    - time: 2
+      strength: strongest
+      reason: phrase_boundary + energy_jump
+    - time: 2.52
+      strength: strong
+      reason: "transient_kick (strength: 0.28)"
+    - time: 3.2
+      strength: strongest
+      reason: phrase_boundary + energy_jump
+    - time: 3.48
+      strength: strongest
+      reason: phrase_boundary + energy_jump
+    - time: 3.91
+      strength: strong
+      reason: "transient_kick (strength: 0.231)"
+    - time: 4.4
+      strength: strong
+      reason: phrase_boundary
+    - time: 5.8
+      strength: strong
+      reason: phrase_boundary
+    - time: 6.957
+      strength: medium
+      reason: bar_3_downbeat
+    - time: 7.2
+      strength: strong
+      reason: phrase_boundary
+    - time: 8.4
+      strength: strong
+      reason: phrase_boundary
+    - time: 10.43
+      strength: strong
+      reason: phrase_boundary
+  hold_zones:
+    - start: 8.4
+      end: 11.03
+      reason: musical_breakdown — visual hold allows viewer absorption
+  beat_grid:
+    - time: 0
+      type: downbeat
+      bar_number: 1
+      beat_number: 1
+    - time: 0.87
+      type: pulse
+      bar_number: 1
+      beat_number: 2
+    - time: 1.739
+      type: snare
+      bar_number: 1
+      beat_number: 3
+    - time: 2.609
+      type: pulse
+      bar_number: 1
+      beat_number: 4
+    - time: 3.478
+      type: downbeat
+      bar_number: 2
+      beat_number: 1
+    - time: 4.348
+      type: pulse
+      bar_number: 2
+      beat_number: 2
+    - time: 5.217
+      type: snare
+      bar_number: 2
+      beat_number: 3
+    - time: 6.087
+      type: pulse
+      bar_number: 2
+      beat_number: 4
+    - time: 6.957
+      type: downbeat
+      bar_number: 3
+      beat_number: 1
+    - time: 7.826
+      type: pulse
+      bar_number: 3
+      beat_number: 2
+    - time: 8.696
+      type: snare
+      bar_number: 3
+      beat_number: 3
+    - time: 9.565
+      type: pulse
+      bar_number: 3
+      beat_number: 4

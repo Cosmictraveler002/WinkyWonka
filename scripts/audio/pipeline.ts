@@ -45,6 +45,11 @@ const steps = [
     args: [projectSlug],
   },
   {
+    name: 'Step 2.5: Build Temporal Skeleton (Beat Grid & Cut Windows)',
+    script: 'scripts/audio/skeleton.ts',
+    args: [projectSlug],
+  },
+  {
     name: 'Step 3: Map Audio Timeline',
     script: 'scripts/audio/map.ts',
     args: forceMap ? [projectSlug, '--force'] : [projectSlug],

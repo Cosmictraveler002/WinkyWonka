@@ -254,4 +254,10 @@ export interface StoryboardManifest {
   asset_requirements: StoryboardAssetRequirement[];
   script_notes: ScriptNote[];
   human_decisions: CreativeDecision[];
+  human_approval?: {
+    status: 'approved' | 'pending';
+    approved_by?: string;
+    approved_at?: string;
+    notes?: string;
+  };
 }

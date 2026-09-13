@@ -1,0 +1,104 @@
+{
+  "project": "dzinr_motion",
+  "timestamp": "2026-09-13T06:40:37.892Z",
+  "overallScore": 100,
+  "contactSheets": [
+    {
+      "mode": "storyboard",
+      "manifestPath": "C:\\Users\\PC\\myapps\\Remotion\\projects\\dzinr_motion\\02_Deconstruction\\contact_sheets_storyboard\\contact-sheet-manifest.json",
+      "sheets": [
+        "contact_001.jpg",
+        "contact_002.jpg",
+        "contact_003.jpg"
+      ],
+      "totalFrames": 29
+    },
+    {
+      "mode": "motion",
+      "manifestPath": "C:\\Users\\PC\\myapps\\Remotion\\projects\\dzinr_motion\\02_Deconstruction\\contact_sheets_motion\\contact-sheet-manifest.json",
+      "sheets": [
+        "contact_001.jpg",
+        "contact_002.jpg",
+        "contact_003.jpg",
+        "contact_004.jpg"
+      ],
+      "totalFrames": 56
+    }
+  ],
+  "scenes": [
+    {
+      "scene": "scene_01",
+      "title": "The Kinetic Hook (Creative Engineering)",
+      "status": "passed",
+      "score": 100,
+      "checks": [
+        "strong opening hook",
+        "intentional shot duration contrast (non-uniform rhythm)",
+        "clean, authored visual direction (no AI-slop tropes)",
+        "visual contact sheets verified (17 keyframe(s) inspected)"
+      ],
+      "issues": []
+    },
+    {
+      "scene": "scene_02",
+      "title": "Product Design & Custom Software",
+      "status": "passed",
+      "score": 100,
+      "checks": [
+        "intentional shot duration contrast (non-uniform rhythm)",
+        "clean, authored visual direction (no AI-slop tropes)",
+        "visual contact sheets verified (8 keyframe(s) inspected)"
+      ],
+      "issues": []
+    },
+    {
+      "scene": "scene_03",
+      "title": "Logo Design & Brand Identities",
+      "status": "passed",
+      "score": 100,
+      "checks": [
+        "intentional shot duration contrast (non-uniform rhythm)",
+        "clean, authored visual direction (no AI-slop tropes)",
+        "visual contact sheets verified (9 keyframe(s) inspected)"
+      ],
+      "issues": []
+    },
+    {
+      "scene": "scene_04",
+      "title": "3D Websites & Web Development",
+      "status": "passed",
+      "score": 100,
+      "checks": [
+        "intentional shot duration contrast (non-uniform rhythm)",
+        "clean, authored visual direction (no AI-slop tropes)",
+        "visual contact sheets verified (8 keyframe(s) inspected)"
+      ],
+      "issues": []
+    },
+    {
+      "scene": "scene_05",
+      "title": "Engineering Process & Tonal Inversion",
+      "status": "passed",
+      "score": 100,
+      "checks": [
+        "intentional shot duration contrast (non-uniform rhythm)",
+        "clean, authored visual direction (no AI-slop tropes)",
+        "visual contact sheets verified (11 keyframe(s) inspected)"
+      ],
+      "issues": []
+    },
+    {
+      "scene": "scene_06",
+      "title": "Kalaकृति Brand Payoff & URL",
+      "status": "passed",
+      "score": 100,
+      "checks": [
+        "intentional shot duration contrast (non-uniform rhythm)",
+        "clean, authored visual direction (no AI-slop tropes)",
+        "compelling closing visual payoff",
+        "visual contact sheets verified (32 keyframe(s) inspected)"
+      ],
+      "issues": []
+    }
+  ]
+}

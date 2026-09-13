@@ -1,0 +1,79 @@
+temporal_analysis:
+  project: "dzinr_motion"
+  total_duration: 11.03
+  cut_count: 6
+  avg_shot_duration: 1.84
+  hook_type: "visual_novelty"
+  narrative_arc: "HOOK → ACCELERATE_SERVICES → CREATOR_REVEAL → TENSION_HOLD → BRAND_PAYOFF"
+  
+  scenes:
+    - id: "scene_01"
+      timestamp: "00:00.00 - 00:01.80"
+      start: 0.00
+      end: 1.80
+      duration: 1.80
+      intention: "Kinetic visual hook — minimalist geometric particle burst + device pop countdown"
+      pacing: "snappy_burst"
+      energy: 0.72
+      background_tone: "light"
+      cut_trigger: "percussion_hit"
+      
+    - id: "scene_02"
+      timestamp: "00:01.80 - 00:03.20"
+      start: 1.80
+      end: 3.20
+      duration: 1.40
+      intention: "Service highlight 1: 'Logo Designing' with diagonal chevron framing"
+      pacing: "kinetic_drive"
+      energy: 0.85
+      background_tone: "light"
+      cut_trigger: "downbeat"
+      
+    - id: "scene_03"
+      timestamp: "00:03.20 - 00:04.40"
+      start: 3.20
+      end: 4.40
+      duration: 1.20
+      intention: "Service highlight 2: 'Branding' with tracking typography & structural letter wireframes"
+      pacing: "accelerated_kinetic"
+      energy: 0.90
+      background_tone: "light"
+      cut_trigger: "snare_impact"
+      
+    - id: "scene_04"
+      timestamp: "00:04.40 - 00:05.80"
+      start: 4.40
+      end: 5.80
+      duration: 1.40
+      intention: "Service highlight 3: 'Website Design' rotating rhombus & kinetic framing"
+      pacing: "driving_motion"
+      energy: 0.88
+      background_tone: "light"
+      cut_trigger: "phrase_boundary"
+      
+    - id: "scene_05"
+      timestamp: "00:05.80 - 00:07.50"
+      start: 5.80
+      end: 7.50
+      duration: 1.70
+      intention: "Human connection / Creator reveal: Rounded frame portrait on black canvas"
+      pacing: "medium_contrast"
+      energy: 0.65
+      background_tone: "dark"
+      cut_trigger: "tonal_inversion"
+      
+    - id: "scene_06"
+      timestamp: "00:07.50 - 00:11.03"
+      start: 7.50
+      end: 11.03
+      duration: 3.53
+      intention: "Decisive brand payoff: Bold 'DZ!NR' lockup with orange exclamation accent"
+      pacing: "settled_hold"
+      energy: 0.40
+      background_tone: "dark"
+      cut_trigger: "final_drop_resolution"
+      
+  global_rhythm:
+    template_match: "Template B (Burst → Hold → Burst → Payoff)"
+    shot_durations: [1.80, 1.40, 1.20, 1.40, 1.70, 3.53]
+    macro_curve: "BURST (0-1.8s) → DRIVE (1.8-5.8s) → INVERT_HOLD (5.8-7.5s) → PAYOFF (7.5-11.03s)"

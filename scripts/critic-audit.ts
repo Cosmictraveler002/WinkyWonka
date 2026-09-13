@@ -11,7 +11,8 @@ if (!projectSlug) {
 
 const rootDir = process.cwd();
 const projectDir = path.join(rootDir, 'projects', projectSlug);
-const analyzerDir = path.join(projectDir, '02_Analyzer');
+const deconstructionDir = path.join(projectDir, '02_Deconstruction');
+const analyzerDir = fs.existsSync(deconstructionDir) ? deconstructionDir : path.join(projectDir, '02_Analyzer');
 const plannerDir = path.join(projectDir, '03_Planner');
 const codeDir = path.join(projectDir, '05_Code', 'scenes');
 
@@ -21,7 +22,9 @@ const aestheticPath = path.join(plannerDir, 'core_aesthetic.yaml');
 const scenesDir = path.join(plannerDir, 'scenes');
 
 let timeline: any = null;
-if (fs.existsSync(storyboardPath)) {
+if (fs.existsSync(timelinePath)) {
+  timeline = YAML.parse(fs.readFileSync(timelinePath, 'utf8'));
+} else if (fs.existsSync(storyboardPath)) {
   try {
     const sb = YAML.parse(fs.readFileSync(storyboardPath, 'utf8'));
     timeline = {
@@ -36,10 +39,6 @@ if (fs.existsSync(storyboardPath)) {
       })),
     };
   } catch {}
-}
-
-if (!timeline && fs.existsSync(timelinePath)) {
-  timeline = YAML.parse(fs.readFileSync(timelinePath, 'utf8'));
 }
 
 if (!timeline) {
@@ -228,10 +227,11 @@ for (let i = 0; i < scenes.length; i++) {
   }
 
   // 6. Audit AI-Slop Aesthetic Compliance (AGENTS.md)
-  const aiSlopKeywords = ['brain', 'circuit', 'robot', 'android', 'hologram', 'neural-network'];
-  const hasSlop = aiSlopKeywords.some(kw => 
-    tsxContent.toLowerCase().includes(kw) || 
-    (sceneConfig && JSON.stringify(sceneConfig).toLowerCase().includes(kw))
+  const aiSlopPatterns = [/\bbrains?\b/i, /\bcircuits?\b/i, /\brobots?\b/i, /\bandroids?\b/i, /\bholograms?\b/i, /\bneural-?networks?\b/i];
+  const cleanedTsx = tsxContent.replace(/JetBrains/gi, '');
+  const hasSlop = aiSlopPatterns.some(pattern => 
+    pattern.test(cleanedTsx) || 
+    (sceneConfig && pattern.test(JSON.stringify(sceneConfig)))
   );
   if (hasSlop) {
     issues.push({

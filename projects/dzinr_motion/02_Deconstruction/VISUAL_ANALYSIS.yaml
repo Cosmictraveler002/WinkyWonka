@@ -1,0 +1,184 @@
+visual_analysis:
+  project: "dzinr_motion"
+  global_visual_philosophy: "Minimalist editorial contrast (Swiss graphic design infused with kinetic pop and high-speed directional geometry)"
+  palette:
+    background_light: "#ffffff"
+    background_dark: "#000000"
+    surface_dark: "#0a0a0a"
+    accent_orange: "#ea580c"       # vibrant energetic cadmium orange
+    accent_orange_deep: "#c2410c"
+    text_primary_dark: "#ffffff"
+    text_primary_light: "#000000"
+    text_muted: "#71717a"
+    wireframe_stroke: "#27272a"
+  typography:
+    headline_font: "Inter, Outfit, sans-serif"
+    weights: ["700", "900"]
+    headline_tracking: "-0.04em"
+    body_tracking: "-0.01em"
+    style_quirks: "Alternating letter weights and colored punctuation (e.g., 'DZ!NR' with orange exclamation)"
+  
+  scenes:
+    - id: "scene_01"
+      timestamp: "00:00.00 - 00:01.80"
+      animation:
+        technique: "isometric pop-in + radiating radial particle burst"
+        duration_frames: 35
+        easing: "spring(damping=14, stiffness=240, mass=0.8)"
+      camera:
+        movement: "static_centered_with_rapid_zoom_punch_at_exit"
+        start_scale: 1.0
+        end_scale: 1.15
+        origin: "center"
+      transition_in: "hard_cut"
+      transition_out:
+        type: "zoom_match_cut"
+        duration_frames: 8
+      depth_layers:
+        - layer: "background"
+          content: "pure stark white canvas (#ffffff)"
+        - layer: "midground"
+          content: "radiating orange and black geometric crosses, triangles, arcs"
+        - layer: "foreground"
+          content: "isometric laptop frame with counter '2' / countdown"
+      sfx:
+        - type: "crisp_percussion_click"
+        - type: "high_frequency_spark_pop"
+      micro_motion:
+        - element: "curved black arcs"
+          animation: "rotational spin 180deg with spring deceleration"
+        - element: "geometric particles"
+          animation: "radial drift outward from center at 1.8px/frame"
+
+    - id: "scene_02"
+      timestamp: "00:01.80 - 00:03.20"
+      animation:
+        technique: "staggered typographic tracking + diagonal chevron reveal"
+        duration_frames: 42
+        easing: "spring(damping=16, stiffness=210, mass=0.9)"
+      camera:
+        movement: "subtle diagonal drift top-right to bottom-left"
+        start_scale: 1.0
+        end_scale: 1.04
+      transition_in: "zoom_match_cut"
+      transition_out:
+        type: "hard_cut_on_beat"
+        duration_frames: 0
+      depth_layers:
+        - layer: "background"
+          content: "split diagonal chevron panels (black and white)"
+        - layer: "midground"
+          content: "faint repeating outline typography 'Logo Designing'"
+        - layer: "foreground"
+          content: "bold primary headline 'Logo Designing' with orange accent"
+      sfx:
+        - type: "sub_kick_downbeat"
+      micro_motion:
+        - element: "chevron borders"
+          animation: "continuous slow diagonal pan at 0.5px/frame"
+
+    - id: "scene_03"
+      timestamp: "00:03.20 - 00:04.40"
+      animation:
+        technique: "kinetic typographic tracking expansion + letter wireframe background"
+        duration_frames: 36
+        easing: "spring(damping=18, stiffness=260)"
+      camera:
+        movement: "centered slow push-in"
+        start_scale: 0.98
+        end_scale: 1.03
+      transition_in: "hard_cut"
+      transition_out:
+        type: "hard_cut"
+        duration_frames: 0
+      depth_layers:
+        - layer: "background"
+          content: "giant architectural wireframe outlines of letters 'Z', 'N', 'R'"
+        - layer: "foreground"
+          content: "tracked headline 'Branding' with custom bracket accents"
+      sfx:
+        - type: "snare_rimshot_hit"
+      micro_motion:
+        - element: "wireframe geometry"
+          animation: "continuous scale breathing 1.0 -> 1.06"
+
+    - id: "scene_04"
+      timestamp: "00:04.40 - 00:05.80"
+      animation:
+        technique: "rotating geometric diamond mask reveal + kinetic text slide"
+        duration_frames: 42
+        easing: "spring(damping=15, stiffness=190)"
+      camera:
+        movement: "pan_right"
+        start_scale: 1.0
+        end_scale: 1.05
+      transition_in: "hard_cut"
+      transition_out:
+        type: "tonal_inversion_cut"
+        duration_frames: 4
+      depth_layers:
+        - layer: "background"
+          content: "white canvas with rotating black rhombus outlines"
+        - layer: "foreground"
+          content: "headline 'Website design' with mixed-case styling"
+      sfx:
+        - type: "whoosh_riser"
+      micro_motion:
+        - element: "rhombus frame"
+          animation: "rotation from -45deg to 45deg"
+
+    - id: "scene_05"
+      timestamp: "00:05.80 - 00:07.50"
+      animation:
+        technique: "rounded device container expansion + circular stroke reveal"
+        duration_frames: 51
+        easing: "spring(damping=20, stiffness=160)"
+      camera:
+        movement: "slow cinematic push-in toward creator portrait"
+        start_scale: 0.95
+        end_scale: 1.05
+      transition_in: "tonal_inversion (light to deep black)"
+      transition_out:
+        type: "wipe_left"
+        duration_frames: 6
+      depth_layers:
+        - layer: "background"
+          content: "pure black background (#000000)"
+        - layer: "midground"
+          content: "white circular stroke container + radiating orange accent arcs"
+        - layer: "foreground"
+          content: "creator in rounded device frame"
+      sfx:
+        - type: "sub_bass_swell"
+        - type: "sparkle_accent"
+      micro_motion:
+        - element: "circular outline"
+          animation: "subtle breathing scale"
+        - element: "orange spark arcs"
+          animation: "rotational drift"
+
+    - id: "scene_06"
+      timestamp: "00:07.50 - 00:11.03"
+      animation:
+        technique: "monumental text entrance + spring settling + glowing exclamation accent"
+        duration_frames: 105
+        easing: "spring(damping=22, stiffness=180, mass=1.1)"
+      camera:
+        movement: "settled hold with imperceptible drift (1.00 -> 1.02)"
+        start_scale: 1.0
+        end_scale: 1.02
+      transition_in: "wipe_left"
+      transition_out: "none (final hold)"
+      depth_layers:
+        - layer: "background"
+          content: "pure deep black (#000000)"
+        - layer: "midground"
+          content: "faint geometric ambient grid / particle dust"
+        - layer: "foreground"
+          content: "ultra-bold 'DZ!NR' mark in pure white with orange '!' mark"
+      sfx:
+        - type: "heavy_sub_bass_drop"
+        - type: "reverb_tail_decay"
+      micro_motion:
+        - element: "exclamation mark"
+          animation: "pulse glow cycle (60 frame period)"

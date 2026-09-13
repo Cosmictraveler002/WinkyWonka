@@ -141,7 +141,27 @@ Or run each inspectable stage independently:
 
 ---
 
-## ⚡ Full Pipeline Orchestrator
+## 📊 Universal Phase & Progress Tracker
+
+Every project in the harness automatically maintains an active phase registry and weighted progress tracker (`PHASE_TRACKER.yaml` & `PROGRESS.md`):
+
+```bash
+# View live visual ASCII progress bar & phase status
+bun run progress <project-slug>
+
+# Full breakdown of deliverables and weights
+bun run phase:status <project-slug>
+
+# Resync phase tracker from project artifacts
+bun run phase:sync <project-slug>
+
+# Sign off a human gate (e.g. Phase 3.7 or Phase 8.0)
+bun run phase:approve <project-slug> 8.0 user "Studio approved"
+```
+
+---
+
+## ⚡ Full Pipeline Orchestrator & Human Gates
 
 Run the complete multi-stage automated build and audit pipeline:
 
@@ -149,27 +169,40 @@ Run the complete multi-stage automated build and audit pipeline:
 bun run pipeline:run <project-slug>
 ```
 
-This sequentially executes:
-1. `[1/5] 📦 Synchronize assets`: Copies project assets to Remotion's public folder.
-2. `[2/5] 🎵 Audio Pipeline`: Runs the full 6-stage audio extraction, composition, and mastering chain.
-3. `[3/5] 🖼️  Storyboard Contact Sheets`: Renders frame grids for structural auditing.
-4. `[4/5] 🤖 Critic Agent Audit`: Analyzes visual pacing, contrast, and rulebook compliance.
-5. `[5/5] 🏁 Quality Gate`: Confirms score threshold (>=90/100) before final production sign-off.
+The pipeline executes through strict quality and approval gates:
+1. `[1/6] 📦 Synchronize Assets`: Copies project assets to Remotion's public folder.
+2. `[2/6] 🎵 Audio Pipeline (Cached)`: Reuses mastered `soundtrack.wav` and beat skeleton if already generated.
+3. `⛔ MANDATORY HUMAN GATE (Phase 3.7)`: Halts execution if `STORYBOARD.yaml` lacks human sign-off (`bun run storyboard:direction approve <project-slug>`).
+4. `[3/6] 🖼️  Fast Contact Sheets (25x–30x Speedup)`: Single-pass sequence extraction of sparse frame grids in ~10s.
+5. `[4/6] 🔄 Refinement Loop`: High-speed batch keyframe capture and visual convergence audit.
+6. `[5/6] 🤖 Critic Agent Audit`: Analyzes visual pacing, contrast, and rulebook compliance (Score $\ge 90/100$).
+7. `⛔ MANDATORY HUMAN GATE (Phase 8.0)`: Launches Remotion Studio at `http://localhost:3000` and awaits explicit human approval before production render.
+
+---
+
+## 🚀 High-Speed Batch Sequence Rendering
+
+Contact sheets and visual refinement loops use a **single-pass batch sequence render** engine with a `disableAudio` prop toggle, achieving a **25×–30× speedup** (from 4+ minutes down to 10–15s):
+
+```bash
+# Batch extract keyframes in a single pass (bypasses ffprobe audio overhead)
+bun run remotion render src/index.ts <compositionId> "<outDir>" --sequence --image-format=jpeg --frames=<frameList> --props="{\"disableAudio\":true}" --gl=angle --muted --overwrite
+```
 
 ---
 
 ## 🎥 Rendering to Video
 
-Render the production MP4 bundle:
+Render the final production MP4 bundle (Phase 9):
 
 ```bash
-bun run render src/index.ts DzinrShowcase out/dzinr.mp4 --overwrite
+bun run render src/index.ts <compositionId> out/<project-slug>.mp4 --overwrite
 ```
 
 Or render a single still frame snapshot:
 
 ```bash
-bun run still src/index.ts DzinrShowcase out/frame-120.png --frame=120
+bun run still src/index.ts <compositionId> out/frame-120.png --frame=120
 ```
 
 ---

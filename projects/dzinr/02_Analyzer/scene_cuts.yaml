@@ -1,0 +1,47 @@
+scene_cuts:
+  project: dzinr
+  video: projects\dzinr\01_Reference\videos\dzinr-Old.mp4
+  total_scenes: 3
+  scenes:
+    - id: scene_01
+      start_time: 0
+      end_time: 2.5
+      duration: 2.5
+      frames:
+        entry:
+          time: 0.38
+          file: scene_01_entry.jpg
+        apex:
+          time: 1.25
+          file: scene_01_apex.jpg
+        exit:
+          time: 2.13
+          file: scene_01_exit.jpg
+    - id: scene_02
+      start_time: 2.5
+      end_time: 5.5
+      duration: 3
+      frames:
+        entry:
+          time: 2.95
+          file: scene_02_entry.jpg
+        apex:
+          time: 4
+          file: scene_02_apex.jpg
+        exit:
+          time: 5.05
+          file: scene_02_exit.jpg
+    - id: scene_03
+      start_time: 5.5
+      end_time: 8.5
+      duration: 3
+      frames:
+        entry:
+          time: 5.95
+          file: scene_03_entry.jpg
+        apex:
+          time: 7
+          file: scene_03_apex.jpg
+        exit:
+          time: 8.05
+          file: scene_03_exit.jpg

@@ -1,0 +1,101 @@
+deconstruction:
+  project: "dzinr_motion"
+  source_video: "01_Reference/video/dzinr-Old.mp4"
+  duration_seconds: 11.03
+  scene_count: 6
+  visual_philosophy: "Minimalist editorial contrast (Swiss graphic design infused with kinetic pop and high-speed directional geometry)"
+  
+  palette:
+    background_light: "#ffffff"
+    background_dark: "#000000"
+    surface_dark: "#0a0a0a"
+    accent_orange: "#ea580c"
+    accent_orange_deep: "#c2410c"
+    text_primary_dark: "#ffffff"
+    text_primary_light: "#000000"
+    text_muted: "#71717a"
+    wireframe_stroke: "#27272a"
+    
+  typography:
+    headline_font: "Inter, Outfit, sans-serif"
+    weights: ["700", "900"]
+    tracking: "-0.04em"
+    style_quirks: "High-contrast editorial hierarchy, alternating weights, bright orange punctuation accents"
+    
+  rhythm_profile:
+    template: "Template B (Burst → Hold → Burst → Payoff)"
+    macro_energy: "BURST (0-1.8s) → DRIVE (1.8-5.8s) → INVERT_HOLD (5.8-7.5s) → PAYOFF (7.5-11.03s)"
+    scene_durations: [1.80, 1.40, 1.20, 1.40, 1.70, 3.53]
+
+  scenes:
+    - id: "scene_01"
+      title: "Kinetic Geometric Hook"
+      start: 0.00
+      end: 1.80
+      duration: 1.80
+      purpose: "HOOK"
+      attention_target: "isometric_particle_burst"
+      background: "#ffffff"
+      animation: "isometric pop-in with radiating orange/black geometric crosses, triangles and spinning arcs"
+      camera: "static centered with rapid zoom punch at exit (1.0 -> 1.15)"
+      sfx: "crisp percussion click + spark pop"
+      
+    - id: "scene_02"
+      title: "Logo Designing Service"
+      start: 1.80
+      end: 3.20
+      duration: 1.40
+      purpose: "DEMONSTRATE"
+      attention_target: "bold_logo_typography"
+      background: "#ffffff / #000000 diagonal split"
+      animation: "staggered typographic tracking + diagonal chevron reveal"
+      camera: "subtle diagonal drift (1.0 -> 1.04)"
+      sfx: "sub kick downbeat"
+      
+    - id: "scene_03"
+      title: "Branding Systems"
+      start: 3.20
+      end: 4.40
+      duration: 1.20
+      purpose: "ESCALATE"
+      attention_target: "branding_tracked_headline"
+      background: "#ffffff with #27272a architectural wireframes"
+      animation: "kinetic tracking expansion + giant architectural wireframe letter silhouettes"
+      camera: "slow centered push-in (0.98 -> 1.03)"
+      sfx: "snare rimshot hit"
+      
+    - id: "scene_04"
+      title: "Website Design"
+      start: 4.40
+      end: 5.80
+      duration: 1.40
+      purpose: "DEMONSTRATE"
+      attention_target: "website_design_frame"
+      background: "#ffffff"
+      animation: "rotating rhombus frame (-45deg to 45deg) + kinetic text slide"
+      camera: "horizontal pan right (1.0 -> 1.05)"
+      sfx: "whoosh riser into tonal inversion"
+      
+    - id: "scene_05"
+      title: "Creator Portrait & Human Hook"
+      start: 5.80
+      end: 7.50
+      duration: 1.70
+      purpose: "CONNECT"
+      attention_target: "creator_device_screen"
+      background: "#000000 (tonal inversion)"
+      animation: "rounded device container expansion + circular stroke reveal + radiating orange accents"
+      camera: "cinematic push-in toward creator portrait (0.95 -> 1.05)"
+      sfx: "sub-bass swell + subtle sparkle"
+      
+    - id: "scene_06"
+      title: "Decisive Brand Payoff"
+      start: 7.50
+      end: 11.03
+      duration: 3.53
+      purpose: "PAYOFF"
+      attention_target: "dzinr_monumental_logo"
+      background: "#000000"
+      animation: "monumental text entrance + spring settling + glowing orange exclamation mark"
+      camera: "settled hold (1.00 -> 1.02)"
+      sfx: "heavy sub-bass drop + long reverb tail decay"

@@ -32,15 +32,23 @@ Example:
 const rootDir = process.cwd();
 const projectDir = path.join(rootDir, 'projects', projectSlug);
 const timelinePath = path.join(projectDir, '03_Planner', 'timeline.yaml');
-const wavPath = path.join(projectDir, '04_Assets', 'audio', 'soundtrack.wav');
-const svgPath = path.join(projectDir, '02_Analyzer', 'audio', 'energy_chart.svg');
+const wavCandidates = [
+  path.join(projectDir, '04_Assets', 'audio', 'soundtrack.wav'),
+  path.join(projectDir, '00_Audio', 'soundtrack.wav'),
+];
+const wavPath = wavCandidates.find(p => fs.existsSync(p)) || wavCandidates[0];
+const targetSvgDir = fs.existsSync(path.join(projectDir, '00_Audio')) 
+  ? path.join(projectDir, '00_Audio') 
+  : path.join(projectDir, '02_Analyzer', 'audio');
+fs.mkdirSync(targetSvgDir, { recursive: true });
+const svgPath = path.join(targetSvgDir, 'energy_chart.svg');
 
 console.log(`\n========================================`);
 console.log(`📊 [Step 6/6] VERIFY AUDIO & CHART: "${projectSlug}"`);
 console.log(`========================================\n`);
 
 if (!fs.existsSync(wavPath)) {
-  console.error(`❌ Mastered audio not found: ${wavPath}`);
+  console.error(`❌ Mastered audio not found in 04_Assets/audio/ or 00_Audio/: ${wavPath}`);
   console.error(`   Run step 5 first: bun run audio:master ${projectSlug}`);
   process.exit(1);
 }

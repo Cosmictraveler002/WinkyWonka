@@ -1,0 +1,8 @@
+project: dzinr_motion
+version: v001
+audited_at: 2026-09-13T04:47:14.080Z
+rulebook: Motion Video & Ad Creative Rulebook (creative_rulebook.md)
+passed: true
+score: 100
+total_checks: 7
+issues: []
